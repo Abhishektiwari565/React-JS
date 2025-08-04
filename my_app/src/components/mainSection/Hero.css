@@ -1,0 +1,14 @@
+
+
+.image-box {
+    width: 100%;
+    height: 100vh;
+    background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQStQ8Mn6x2AIQppj9tmfx74gRJG6aYNcoufA&s");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    image-rendering: auto;
+  image-rendering: crisp-edges;
+  
+}
