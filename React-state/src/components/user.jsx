@@ -1,4 +1,4 @@
-const User=({props})=>{
+const User=(props)=>{
 return(
 <>
    <h3>{props.name}</h3>
