@@ -1,6 +1,5 @@
-import User from "./components/user";
-import Data from "./assets/userData"
-import Hooks from "./components/Hooks";
+// import User from "./components/user";
+// import Data from "./assets/userData"
 import Counter from "./components/Hooks";
 
 const App = () => {

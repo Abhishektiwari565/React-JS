@@ -17,7 +17,13 @@ export default function Counter() {
 
     const mul=()=>{
       let temp=count;
-      temp*2;
+      temp*=2;
+      setcount(temp);
+    }
+
+    const divide=()=>{
+      let temp=count;
+      temp/=2;
       setcount(temp);
     }
 
@@ -27,6 +33,7 @@ export default function Counter() {
     <button onClick={add}>+1</button>
     <button onClick={sub}>-1</button>
     <button onClick={mul}>2X</button>
+    <button onClick={divide}>/2</button>
    </div>
   )
 }
