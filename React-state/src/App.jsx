@@ -1,6 +1,7 @@
 import User from "./components/user";
 import Data from "./assets/userData"
 import Hooks from "./components/Hooks";
+import Counter from "./components/Hooks";
 
 const App = () => {
     return (
@@ -10,7 +11,7 @@ const App = () => {
         //     return <User key={detail.id} name={detail.name} email={detail.email} />
         // })
         }
-<Hooks/>
+<Counter/>
     </>
     )
 }
