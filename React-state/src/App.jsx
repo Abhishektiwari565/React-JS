@@ -1,17 +1,17 @@
 import User from "./components/user";
 import Data from "./assets/userData"
-import Counter from "./components/Hooks";
+import Counter from "./components/Hooks/Hooks.jsx";
 // import Counter from "./components/Hooks";
 
 const App = () => {
     return (
         <>
             {
-                // Data.map((detail) => {
-                //      return<User key={detail.id}  name={detail.name} email={detail.email} />
-                // })
+                Data.map((detail) => {
+                     return<User key={detail.id}  name={detail.name} email={detail.email} />
+                })
             }
-            <Counter/>
+            {/* <Counter/> */}
            
         </>
     )
