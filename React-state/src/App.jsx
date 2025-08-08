@@ -1,6 +1,6 @@
 import User from "./components/user";
 import Data from "./assets/userData"
-import Books from "./components/Books/books";
+import Counter from "./components/Hooks";
 // import Counter from "./components/Hooks";
 
 const App = () => {
@@ -11,8 +11,8 @@ const App = () => {
                 //      return<User key={detail.id}  name={detail.name} email={detail.email} />
                 // })
             }
-            {/* <Counter/> */}
-            <Books/>
+            <Counter/>
+           
         </>
     )
 }

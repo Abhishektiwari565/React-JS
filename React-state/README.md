@@ -1,12 +1,53 @@
-# React + Vite
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
-Currently, two official plugins are available:
+# 📊 Counter App (React)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+A simple yet powerful **Counter App** built with **React** ⚛️ that lets you **add**, **subtract**, **multiply**, and **divide** numbers interactively! 🎯
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## ✨ Features
+
+* ➕ **Increment** the counter by 1
+* ➖ **Decrement** the counter by 1
+* ✖️ **Multiply** the counter by 2
+* ➗ **Divide** the counter by 2
+* 🎨 Simple UI for quick testing and learning React's `useState` hook
+
+---
+
+## 🛠️ Tech Stack
+
+* ⚛️ **React** – For creating the component and managing state
+* 🪝 **useState Hook** – For storing and updating the count value
+* 🎯 **JavaScript ES6** – For cleaner and modern code
+
+---
+
+## 📂 Code Overview
+
+### 1️⃣ **State Initialization**
+
+```javascript
+const [count, setcount] = useState(0);
+```
+
+Here we store the current number (`count`) and have a function (`setcount`) to update it.
+📌 Starts from **0** by default.
+
+---
+
+### 2️⃣ **Functions for Operations**
+
+Each function updates the count value:
+
+* `add()` ➡️ Adds 1
+* `sub()` ➡️ Subtracts 1
+* `mul()` ➡️ Multiplies by 2
+* `divide()` ➡️ Divides by 2
+
+* **Displays** the count 📟
+* **4 buttons** for each operation 🖱️
+
+---
+demo video:
