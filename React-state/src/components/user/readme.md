@@ -24,4 +24,4 @@ Built using **React functional components**, **props**, and the magic of `.map()
 - 🎯 Clean and simple code structure for beginners.
 
 ---
-screenshot:
+screenshot:<img width="314" height="878" alt="Screenshot 2025-08-08 120202" src="https://github.com/user-attachments/assets/8bad2171-dd31-4057-a714-c4e8ee600c71" />
