@@ -1,57 +1,27 @@
 
 
-# 📊 Counter App (React)
+```markdown
+# 📇 React User List App
 
-A simple yet powerful **Counter App** built with **React** ⚛️ that lets you **add**, **subtract**, **multiply**, and **divide** numbers interactively! 🎯
+A beginner-friendly React project that displays a list of users 📄 with their names 🧑‍💼 and emails 📧.  
+Built using **React functional components**, **props**, and the magic of `.map()` 🔄 for dynamic rendering.  
+
+✨ Perfect for:
+- 📝 Learning **React basics**.
+- 🔑 Understanding **props**.
+- 📦 Rendering lists dynamically.
+- 🧩 Building clean and reusable components.
+
+🚀 Quick, simple, and easy to follow — great for practice or as a starter project! 💡
 
 ---
 
 ## ✨ Features
-
-* ➕ **Increment** the counter by 1
-* ➖ **Decrement** the counter by 1
-* ✖️ **Multiply** the counter by 2
-* ➗ **Divide** the counter by 2
-* 🎨 Simple UI for quick testing and learning React's `useState` hook
-
----
-
-## 🛠️ Tech Stack
-
-* ⚛️ **React** – For creating the component and managing state
-* 🪝 **useState Hook** – For storing and updating the count value
-* 🎯 **JavaScript ES6** – For cleaner and modern code
+- 📄 Displays a list of users with their **name** and **email**.
+- ⚡ Uses **functional components** with ES6 arrow functions.
+- 🔄 Renders data dynamically using `.map()` from an array.
+- 🧩 Demonstrates **props** usage in React.
+- 🎯 Clean and simple code structure for beginners.
 
 ---
-
-## 📂 Code Overview
-
-### 1️⃣ **State Initialization**
-
-```javascript
-const [count, setcount] = useState(0);
-```
-
-Here we store the current number (`count`) and have a function (`setcount`) to update it.
-📌 Starts from **0** by default.
-
----
-
-### 2️⃣ **Functions for Operations**
-
-Each function updates the count value:
-
-* `add()` ➡️ Adds 1
-* `sub()` ➡️ Subtracts 1
-* `mul()` ➡️ Multiplies by 2
-* `divide()` ➡️ Divides by 2
-
-* **Displays** the count 📟
-* **4 buttons** for each operation 🖱️
-
----
-demo video:
-
-https://github.com/user-attachments/assets/bd58c89d-4bc2-4840-a123-08e635cbb06d
-
-
+screenshot:
