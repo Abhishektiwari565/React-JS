@@ -1,12 +1,38 @@
-# React + Vite
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## 📚 Classroom Manager
 
-Currently, two official plugins are available:
+A **React**-based application for managing classroom data — easily **add**, **edit**, and **delete** entries for Faculty, Student, and Course in a clean, user-friendly interface. 🚀
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+---
 
-## Expanding the ESLint configuration
+### ✨ Features
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+✅ **Add Class Data** – Input Faculty name, Student name, and Course.
+✅ **Edit Entries** – Quickly update any existing record. ✏️
+✅ **Delete Entries** – Remove unwanted class records 🗑️.
+✅ **Form Validation** – Alerts you if any required field is missing ⚠️.
+✅ **User-Friendly UI** – Simple form with intuitive buttons.
+
+---
+
+### 🖥️ How It Works
+
+1. **Enter** Faculty, Student, and Course names in the input fields ✍️.
+2. Click **Add** ➕ to save the record.
+3. View all entries in the **Classroom Data** section 📋.
+4. To update:
+
+   * Click **Edit** 📝 → fields are pre-filled → update → click **Update**.
+5. To delete:
+
+   * Click **Delete** ❌ to remove the entry instantly.
+
+---
+
+### 🛠️ Tech Stack
+
+* ⚛ **React JS** – Frontend framework
+* 🎨 **CSS** – For styling the UI
+* 💡 **useState Hook** – State management for form and data
+
+video:
