@@ -39,3 +39,7 @@ A simple yet useful **React** app that analyzes your text and gives you **length
 
 
 ### 📷 video 
+
+https://github.com/user-attachments/assets/4bdf9a81-2966-4a9f-86e0-47f84e430c2e
+
+
