@@ -1,0 +1,60 @@
+/* Main container */
+div {
+  max-width: 420px;
+  margin: 60px auto;
+  padding: 25px;
+  background-color: #f9f9fb;
+  border-radius: 14px;
+  box-shadow: 0px 6px 18px rgba(0, 0, 0, 0.08);
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  text-align: center;
+}
+
+/* Input box */
+input[type="text"] {
+  width: 100%;
+  padding: 12px 14px;
+  margin-bottom: 18px;
+  border: 2px solid #e3e3e3;
+  border-radius: 10px;
+  font-size: 16px;
+  transition: border-color 0.25s ease, box-shadow 0.25s ease;
+}
+
+input[type="text"]:focus {
+  border-color: #6c63ff;
+  box-shadow: 0px 0px 6px rgba(108, 99, 255, 0.3);
+  outline: none;
+}
+
+/* Button */
+button {
+  background: linear-gradient(135deg, #6c63ff, #5a52d5);
+  color: white;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 8px;
+  font-size: 15px;
+  cursor: pointer;
+  transition: transform 0.2s ease, background 0.3s ease;
+}
+
+button:hover {
+  transform: scale(1.05);
+  background: linear-gradient(135deg, #5a52d5, #4a43b2);
+}
+
+/* Divider */
+hr {
+  margin: 25px 0;
+  border: none;
+  height: 1px;
+  background-color: #ddd;
+}
+
+/* Result text */
+p h3 {
+  margin: 8px 0;
+  font-weight: 600;
+  color: #444;
+}
