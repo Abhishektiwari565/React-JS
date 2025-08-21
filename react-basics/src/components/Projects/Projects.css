@@ -1,0 +1,119 @@
+
+
+.project-section {
+  background: linear-gradient(135deg, #0d0d0d, #1a1a1a);
+  color: #fff;
+  padding: 70px 100px;
+  min-height: 100vh;
+  animation: fadeIn 1s ease-in-out;
+}
+
+.title {
+  font-size: 42px;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 50px;
+  color: #00bcd4;
+  letter-spacing: 2px;
+  position: relative;
+}
+
+.title::after {
+  content: "";
+  display: block;
+  width: 80px;
+  height: 3px;
+  background: #ff9800;
+  margin: 10px auto 0;
+  border-radius: 2px;
+}
+
+.repo-detail {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+}
+
+.box {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 25px;
+  border-radius: 15px;
+  transition: all 0.3s ease;
+  box-shadow: 0px 8px 20px rgba(0, 188, 212, 0.1);
+}
+
+.box:hover {
+  transform: translateY(-8px);
+  box-shadow: 0px 12px 25px rgba(0, 188, 212, 0.4);
+}
+
+.box h2 {
+  font-size: 22px;
+  margin-bottom: 20px;
+  color: #fff;
+}
+
+
+.btn-section {
+  display: flex;
+  gap: 15px;
+  margin-top: 12px;
+}
+
+.btn-section button {
+  padding: 8px 18px;
+  font-size: 14px;
+  font-weight: 600;
+  border-radius: 25px;
+  border: 2px solid transparent;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.btn-section button:first-of-type {
+  background: #00bcd4;
+  color: #fff;
+  border: 2px solid #00bcd4;
+}
+
+.btn-section button:first-of-type:hover {
+  background: transparent;
+  color: #00bcd4;
+  box-shadow: 0 0 12px rgba(0, 188, 212, 0.7);
+}
+
+.btn-section button:last-of-type {
+  background: transparent;
+  border: 2px solid #ff9800;
+}
+
+.btn-section button:last-of-type a {
+  text-decoration: none;
+  color: #ff9800;
+  font-weight: 600;
+  display: inline-block;
+}
+
+.btn-section button:last-of-type:hover {
+  background: #ff9800;
+  box-shadow: 0 0 12px rgba(255, 152, 0, 0.7);
+}
+
+.btn-section button:last-of-type:hover a {
+  color: #fff;
+}
+
+@media (max-width: 768px) {
+  .project-section {
+    padding: 50px 20px;
+  }
+
+  .title {
+    font-size: 32px;
+  }
+
+  .box h2 {
+    font-size: 18px;
+  }
+}

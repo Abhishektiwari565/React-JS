@@ -10,7 +10,8 @@ export default function About(props) {
         <h2>Full Stack developer</h2>
         <p>{bio}</p>
         <p>{location}</p>
-        <button>Hire me</button>
+        <button><a href="https://www.linkedin.com/in/abhishek-tiwari-65b25034b
+">Hire me</a></button>
         <button>Resume</button>
     </div>
     <div className='img'>

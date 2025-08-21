@@ -38,42 +38,50 @@
   max-width: 600px;
   margin-bottom: 15px;
 }
-
 .about button {
-  padding: 12px 28px;
-  margin: 10px 15px 0 0;
+  padding: 10px 22px;
   font-size: 16px;
   font-weight: 600;
   border-radius: 30px;
   border: 2px solid transparent;
   cursor: pointer;
+  margin-right: 12px;
   transition: all 0.3s ease;
 }
 
-
 .about button:first-of-type {
-  background: #00bcd4;
+  background: linear-gradient(135deg, #00bcd4, #0097a7);
   color: #fff;
   border: 2px solid #00bcd4;
+  box-shadow: 0 4px 12px rgba(0, 188, 212, 0.4);
 }
 
 .about button:first-of-type:hover {
   background: transparent;
   color: #00bcd4;
-  box-shadow: 0 0 15px rgba(0, 188, 212, 0.7);
+  box-shadow: 0 0 12px rgba(0, 188, 212, 0.8);
+}
+
+.about button:first-of-type a {
+  text-decoration: none;
+  color: inherit;
+  display: inline-block;
+  width: 100%;
+  height: 100%;
 }
 
 .about button:last-of-type {
   background: transparent;
-  color: #ff9800;
   border: 2px solid #ff9800;
+  color: #ff9800;
 }
 
 .about button:last-of-type:hover {
   background: #ff9800;
   color: #fff;
-  box-shadow: 0 0 15px rgba(255, 152, 0, 0.7);
+  box-shadow: 0 0 12px rgba(255, 152, 0, 0.7);
 }
+
 
 .img {
   flex: 1;
