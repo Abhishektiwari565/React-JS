@@ -86,12 +86,13 @@ This section allows users to **get in touch with me** easily.
 * **Styling:** CSS3 🎨 (flexbox/grid, animations)
 * **State Management:** React Hooks (`useState`, `useRef`)
 * **Form Handling:** Controlled Components + Validation ✅
-
 ---
 
-
-
 ## 📸 video:
+
+https://github.com/user-attachments/assets/b7c59c81-73e4-4995-b1bf-478706c3b12b
+
+
 
 
 ## 🙌 Acknowledgements
