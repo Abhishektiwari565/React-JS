@@ -15,6 +15,9 @@ export default function About(props) {
         <button>Resume</button>
     </div>
     <div className='img'>
+
+
+      
         <img src={avatar_url} alt="" />
     </div>
   </section>

@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react'
 import About from '../../components/About/About'
 import axios from 'axios'
 import Projects from '../../components/Projects/Projects'
+import Contact from '../../components/Contact/Contact'
 
 export default function Home() {
   const [githubData,setGithubData]=useState({})
@@ -27,6 +28,7 @@ export default function Home() {
     <div>
       <About user={githubData}/>
       <Projects repos={repos}/>
+      <Contact/>
     </div>
   )
 }
