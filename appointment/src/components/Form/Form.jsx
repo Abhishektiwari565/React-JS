@@ -21,10 +21,19 @@ export default function Form() {
 
     const handleSubmit = (e) => {
     e.preventDefault();
-    console.log("Appointment Booked:", Appointment);
-    alert(`Appointment booked for ${Appointment.name} with ${Appointment.doctor}`);
-  };
+   const isEmpty= Object.values(Appointment).some((values)=>values.trim()==="");
 
+   if(isEmpty){
+   alert("All fields are required!!")
+   }else{
+       console.log("Appointment Booked:", Appointment);
+    alert(`Appointment booked for ${Appointment.name} with ${Appointment.doctor}`);
+
+    // console.log(Appointment);
+   }
+
+  };
+ 
   return (
     <div>
         <form action="" className='form-box'>
@@ -38,7 +47,7 @@ export default function Form() {
                 <input onChange={handleInput} value={Appointment.hospital}  type="text" name='hospital' />
 
                 <label htmlFor="contact">Contact</label>
-                <input onChange={handleInput} value={Appointment.phone} type="tel" name="phone" />
+                <input onChange={handleInput} value={Appointment.phone} maxLength={"10"} type="tel" name="phone" />
 
                 <div className='gender'>
                 <input onChange={handleInput} value="male" type="radio" name="gender" />
