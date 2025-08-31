@@ -11,7 +11,6 @@ export default function Form() {
     date: "",
     doctor: "",
     subject: ""
-
   });
 
   const handleInput = (e) => {
@@ -23,7 +22,6 @@ export default function Form() {
   const handleSubmit = (e) => {
     e.preventDefault();
     const isEmpty = Object.values(Appointment).some((values) => values.trim() === "");
-
     if (isEmpty) {
       alert("All fields are required!!")
     } else {
@@ -33,11 +31,9 @@ export default function Form() {
       setViewList(arr);
       // console.log(Appointment);
     }
-
   };
 
   return (
-
     <div className='nav-div'>
       {/* ✅ Navbar */}
       <nav className="navbar">
@@ -95,7 +91,8 @@ export default function Form() {
       </div>
 
       <div className="detail-box">
-        {
+      
+         {
           viewList.map((form, index) => <div key={index}>
             <div key={index} className="detail-card">
               <p><strong>Patient Name:</strong> {form.name}</p>
@@ -107,8 +104,8 @@ export default function Form() {
               <p><strong>Subject:</strong> {form.subject}</p>
               <hr />
             </div>
-          </div>)
-        }
+          </div>)}
+      
 
       </div>
     </div>
