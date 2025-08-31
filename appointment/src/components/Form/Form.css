@@ -1,101 +1,154 @@
-/* Container and card style */
-.form-box {
-  max-width: 500px;
-  margin: 40px auto;
-  padding: 30px 25px;
-  border: 2px solid #2a9d8f; /* hospital theme green */
-  border-radius: 12px;
-  background: #f0f8f5; /* soft background */
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-/* Form heading */
+
+body {
+  background: linear-gradient(135deg, #e0f7fa, #e8f5e9);
+  min-height: 100vh;
+}
+
+.navbar {
+  background: #0288d1;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 40px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+.navbar h1 {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.navbar ul {
+  display: flex;
+  list-style: none;
+  gap: 25px;
+}
+
+.navbar ul li a {
+  text-decoration: none;
+  color: white;
+  font-weight: 500;
+  transition: 0.3s;
+}
+
+.navbar ul li a:hover {
+  color: #ffeb3b;
+}
+
+.main {
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start;
+  margin: 30px;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+.form-box {
+  background: white;
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.15);
+  width: 500px;
+  transition: 0.3s;
+}
+
+.form-box:hover {
+  transform: scale(1.02);
+}
+
 .form-box h2 {
   text-align: center;
-  color: #264653;
-  margin-bottom: 25px;
-  font-size: 24px;
-  font-weight: 700;
+  margin-bottom: 20px;
+  color: #0288d1;
 }
 
-/* Labels */
+.form{
+  
+}
+
 .form label {
-  display: block;
-  margin: 12px 0 5px;
-  color: #264653;
   font-weight: 600;
+  margin-top: 10px;
+  display: block;
+  color: #333;
 }
 
-/* Inputs, select, textarea */
-.form input[type="text"],
-.form input[type="tel"],
-.form input[type="date"],
-.form select,
-.form textarea {
+.form input, .form select, .form textarea {
   width: 100%;
-  padding: 10px 12px;
-  border-radius: 6px;
+  padding: 10px;
+  margin: 8px 0 15px;
   border: 1px solid #ccc;
-  font-size: 16px;
+  border-radius: 8px;
   outline: none;
   transition: 0.3s;
 }
 
-.form input:focus,
-.form select:focus,
-.form textarea:focus {
-  border-color: #2a9d8f;
-  box-shadow: 0 0 5px rgba(42, 157, 143, 0.5);
+.form input:focus, .form select:focus, .form textarea:focus {
+  border-color: #0288d1;
+  box-shadow: 0 0 8px rgba(2, 136, 209, 0.3);
 }
 
-/* Gender radio buttons */
 .gender {
   display: flex;
   align-items: center;
-  gap: 20px;
-  margin: 10px 0;
+  gap: 15px;
+  margin-bottom: 15px;
 }
 
-.gender input[type="radio"] {
-  margin-right: 6px;
+.gender input {
+  width: auto;
 }
 
-/* Textarea */
-.form textarea {
-  resize: vertical;
-  min-height: 80px;
-}
-
-/* Submit button */
-.form button {
+button {
   width: 100%;
   padding: 12px;
-  margin-top: 20px;
+  background: #0288d1;
+  color: white;
   border: none;
   border-radius: 8px;
-  background-color: #2a9d8f;
-  color: white;
-  font-size: 18px;
-  font-weight: bold;
   cursor: pointer;
+  font-weight: bold;
   transition: 0.3s;
 }
 
-.form button:hover {
-  background-color: #21867a;
-  transform: scale(1.03);
+button:hover {
+  background: #0277bd;
 }
 
-/* Responsive design */
-@media screen and (max-width: 550px) {
-  .form-box {
-    padding: 20px;
-    margin: 20px;
-  }
+.detail-box {
+  background: #ffffff;
+  padding: 25px;
+  border-radius: 15px;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.15);
+  flex: 1;
+  min-width: 350px;
+}
 
-  .gender {
-    flex-direction: column;
-    gap: 10px;
-  }
+.detail-card {
+  background: #f1f8e9;
+  padding: 20px;
+  border-left: 6px solid #43a047;
+  margin-bottom: 15px;
+  border-radius: 10px;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+}
+
+.detail-card p {
+  margin: 6px 0;
+  font-size: 15px;
+  color: #333;
+}
+
+.detail-card strong {
+  color: #0288d1;
 }
