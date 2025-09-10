@@ -37,3 +37,7 @@ It is designed as a **beginner-friendly project** to practice **frontend develop
 
 video:
 
+https://github.com/user-attachments/assets/6e79ea5a-cb33-4c71-86ac-26246004ff07
+
+
+
