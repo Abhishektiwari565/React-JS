@@ -1,6 +1,169 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
+  /* ---------- General ---------- */
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: #f5f6fa;
+  color: #2f3640;
+}
+
+h2 {
   text-align: center;
+  margin: 20px 0;
+  font-size: 2rem;
+  color: #273c75;
+}
+
+/* ---------- Navbar ---------- */
+nav {
+  background: #273c75;
+  padding: 15px 40px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  margin: 0 15px;
+  font-weight: 500;
+  transition: 0.3s;
+}
+
+nav a:hover {
+  color: #00a8ff;
+}
+
+nav button {
+  background: #e84118;
+  border: none;
+  color: white;
+  padding: 8px 16px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+nav button:hover {
+  background: #c23616;
+}
+
+/* ---------- Product Grid ---------- */
+.product-view {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 25px;
+  padding: 20px;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.product-detail {
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+  padding: 20px;
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.product-detail:hover {
+  transform: translateY(-5px);
+}
+
+.product-detail img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 15px;
+}
+
+.product-detail h3 {
+  margin: 8px 0;
+  font-size: 1.1rem;
+  color: #2d3436;
+}
+
+.product-detail p {
+  color: #636e72;
+  font-size: 0.9rem;
+  margin-bottom: 12px;
+}
+
+.product-detail button {
+  background: #00a8ff;
+  border: none;
+  color: white;
+  padding: 10px 18px;
+  margin: 5px;
+  border-radius: 8px;
+  cursor: pointer;  
+  font-weight: 500;
+  transition: 0.3s;
+}
+
+.product-detail button:hover {
+  background: #0097e6;
+}
+
+/* ---------- Cart ---------- */
+.cartDetail {
+  background: white;
+  margin: 15px auto;
+  padding: 15px 20px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  max-width: 600px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+}
+
+.cartDetail img {
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.cartDetail p {
+  flex: 1;
+  font-weight: 500;
+  color: #2f3640;
+}
+
+.cartDetail button {
+  background: #e84118;
+  border: none;
+  color: white;
+  padding: 8px 14px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: 0.3s;
+}
+
+.cartDetail button:hover {
+  background: #c23616;
+}
+
+/* ---------- Sign In ---------- */
+input {
+  display: block;
+  margin: 10px auto;
+  padding: 10px 14px;
+  width: 250px;
+  border-radius: 6px;
+  border: 1px solid #dcdde1;
+  font-size: 1rem;
+}
+
+button {
+  display: block;
+  margin: 10px auto;
 }
