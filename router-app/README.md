@@ -99,3 +99,7 @@ http://localhost:3000
 ---
 
 ## 📸 video:
+
+https://github.com/user-attachments/assets/67c5d7d2-ae24-4e82-b5c7-be1ac59ad466
+
+
