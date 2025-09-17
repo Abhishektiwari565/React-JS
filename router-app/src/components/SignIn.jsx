@@ -18,10 +18,14 @@ export default function SignIn() {
     }
    
   return (
-    <div>
-      <input type="text" ref={emailRef} />
-      <input type="text" ref={passwordRef}/>
+  <div className="signin-container">
+    <div className="signin-box">
+      <h2>Sign In</h2>
+      <input type="text" placeholder="Email" ref={emailRef} />
+      <input type="password" placeholder="Password" ref={passwordRef} />
       <button onClick={HandleSignIn}>Sign In</button>
     </div>
-  )
+  </div>
+)
+
 }

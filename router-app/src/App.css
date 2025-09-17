@@ -1,169 +1,198 @@
-  /* ---------- General ---------- */
+/* ---------------- GLOBAL STYLES ---------------- */
 body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   margin: 0;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background: #f5f6fa;
-  color: #2f3640;
+  background: #f8f9fa;
+  color: #333;
 }
 
-h2 {
-  text-align: center;
-  margin: 20px 0;
-  font-size: 2rem;
-  color: #273c75;
+h1, h2, h3, h4 {
+  margin: 10px 0;
+  font-weight: 600;
 }
 
-/* ---------- Navbar ---------- */
-nav {
-  background: #273c75;
-  padding: 15px 40px;
+button {
+  cursor: pointer;
+  border: none;
+  outline: none;
+  font-size: 14px;
+  border-radius: 6px;
+  transition: all 0.3s ease;
+}
+
+/* ---------------- NAVBAR ---------------- */
+/* ---------------- NAVBAR ---------------- */
+.navbar {
   display: flex;
-  align-items: center;
   justify-content: space-between;
+  align-items: center;
+  background: linear-gradient(90deg, #1e3c72, #2a5298);
+  padding: 12px 40px;
   position: sticky;
   top: 0;
   z-index: 1000;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
 }
 
-nav a {
+.navbar .logo {
+  font-size: 22px;
+  font-weight: 700;
   color: white;
-  text-decoration: none;
-  margin: 0 15px;
-  font-weight: 500;
-  transition: 0.3s;
+  letter-spacing: 1px;
 }
 
-nav a:hover {
-  color: #00a8ff;
-}
-
-nav button {
-  background: #e84118;
-  border: none;
-  color: white;
-  padding: 8px 16px;
-  border-radius: 6px;
-  cursor: pointer;
-  font-weight: bold;
-  transition: 0.3s;
-}
-
-nav button:hover {
-  background: #c23616;
-}
-
-/* ---------- Product Grid ---------- */
-.product-view {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+.navbar-links {
+  display: flex;
   gap: 25px;
-  padding: 20px;
-  max-width: 1200px;
-  margin: auto;
 }
 
-.product-detail {
-  background: white;
-  border-radius: 12px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
-  padding: 20px;
-  text-align: center;
-  transition: transform 0.3s ease;
-}
-
-.product-detail:hover {
-  transform: translateY(-5px);
-}
-
-.product-detail img {
-  width: 100%;
-  height: 200px;
-  object-fit: cover;
-  border-radius: 8px;
-  margin-bottom: 15px;
-}
-
-.product-detail h3 {
-  margin: 8px 0;
-  font-size: 1.1rem;
-  color: #2d3436;
-}
-
-.product-detail p {
-  color: #636e72;
-  font-size: 0.9rem;
-  margin-bottom: 12px;
-}
-
-.product-detail button {
-  background: #00a8ff;
-  border: none;
-  color: white;
-  padding: 10px 18px;
-  margin: 5px;
-  border-radius: 8px;
-  cursor: pointer;  
+.navbar-links a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 15px;
   font-weight: 500;
-  transition: 0.3s;
+  transition: all 0.3s ease;
 }
 
-.product-detail button:hover {
-  background: #0097e6;
+.navbar-links a:hover {
+  color: #ffca28;
+  transform: translateY(-2px);
 }
 
-/* ---------- Cart ---------- */
+.navbar button {
+  background: #ff5722;
+  color: #fff;
+  padding: 6px 14px;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.navbar button:hover {
+  background: #e64a19;
+}
+
+/* ---------------- HOME PAGE ---------------- */
+.home-header {
+  background: url("https://images.unsplash.com/photo-1503602642458-232111445657?auto=format&fit=crop&w=1500&q=80")
+    no-repeat center center/cover;
+  height: 300px;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  border-radius: 0 0 20px 20px;
+  margin-bottom: 30px;
+  box-shadow: 0px 4px 15px rgba(0,0,0,0.25);
+}
+
+.home-header h1 {
+  font-size: 42px;
+  margin: 0;
+  font-weight: 700;
+  text-shadow: 2px 2px 5px rgba(0,0,0,0.5);
+}
+
+.home-header p {
+  font-size: 18px;
+  margin-top: 10px;
+  font-weight: 400;
+  max-width: 600px;
+}
+
+/* keep the product grid styles I gave before */
+
+
+/* ---------------- PRODUCT LIST ---------------- */
+
+
+/* ---------------- CART PAGE ---------------- */
 .cartDetail {
-  background: white;
-  margin: 15px auto;
-  padding: 15px 20px;
-  border-radius: 12px;
   display: flex;
   align-items: center;
-  gap: 20px;
+  gap: 15px;
+  background: white;
+  padding: 12px;
+  margin: 12px auto;
+  border-radius: 10px;
+  width: 90%;
   max-width: 600px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+  box-shadow: 0px 4px 10px rgba(0,0,0,0.1);
 }
 
 .cartDetail img {
-  width: 80px;
-  height: 80px;
-  object-fit: cover;
+  width: 100px;
+  height: 100px;
+  object-fit: contain;
   border-radius: 8px;
+  border: 1px solid #eee;
 }
 
 .cartDetail p {
   flex: 1;
+  font-size: 16px;
   font-weight: 500;
-  color: #2f3640;
 }
 
 .cartDetail button {
-  background: #e84118;
-  border: none;
-  color: white;
   padding: 8px 14px;
-  border-radius: 6px;
-  cursor: pointer;
-  font-weight: 500;
-  transition: 0.3s;
+  background: #f44336;
+  color: white;
 }
 
 .cartDetail button:hover {
-  background: #c23616;
+  background: #d32f2f;
 }
 
-/* ---------- Sign In ---------- */
-input {
-  display: block;
-  margin: 10px auto;
-  padding: 10px 14px;
-  width: 250px;
-  border-radius: 6px;
-  border: 1px solid #dcdde1;
-  font-size: 1rem;
+.Total-box {
+  margin: 20px auto;
+  padding: 15px 25px;
+  background: #222;
+  color: white;
+  border-radius: 12px;
+  text-align: center;
+  font-size: 20px;
+  font-weight: bold;
+  width: fit-content;
 }
 
-button {
-  display: block;
-  margin: 10px auto;
+/* ---------------- SIGN IN PAGE ---------------- */
+.signin-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.signin-box {
+  background: white;
+  padding: 40px;
+  border-radius: 12px;
+  box-shadow: 0px 6px 20px rgba(0,0,0,0.15);
+  text-align: center;
+  width: 300px;
+}
+
+.signin-box input {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  font-size: 14px;
+}
+
+.signin-box button {
+  width: 100%;
+  padding: 10px;
+  background: #4caf50;
+  color: white;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.signin-box button:hover {
+  background: #388e3c;
 }
