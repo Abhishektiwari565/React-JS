@@ -1,16 +1,76 @@
-# React + Vite
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
-Currently, two official plugins are available:
+# 🛒 React Order Management System
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+A simple and interactive **Order Management System** built with **React.js**.
+This project allows users to **search, filter, and manage order data** using multiple filters such as Order ID, Customer Name, Product, Payment Method, Status, and Date.
 
-## React Compiler
+---
 
-The React Compiler is not enabled on this template. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## ✨ Features
 
-## Expanding the ESLint configuration
+✅ **Filter Orders** by multiple fields (Order ID, Customer, Product, Payment, Status).
+✅ **Search Button** to display filtered results.
+✅ **Clear Filters Button** to reset all inputs and show all data.
+✅ **Dynamic Table** showing live order details.
+✅ **Reusable Components** (Home for filters, HeroSection for table).
+✅ **Responsive Design** with CSS Grid/Flexbox.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+---
+
+## 🏗️ Project Structure
+
+```
+📦 your-project
+├── 📂 src
+│   ├── 📂 assets
+│   │   ├── 📂 components
+│   │   │   ├── 📂 Home
+│   │   │   │   ├── Home.jsx
+│   │   │   │   ├── Home.css
+│   │   │   ├── 📂 HeroSection
+│   │   │   │   ├── HeroSection.jsx
+│   │   │   │   ├── HeroSection.css
+│   │   │   ├── 📂 Navbar
+│   │   │   │   ├── Navbar.jsx
+│   │   │   ├── 📂 Middle
+│   │   │   │   ├── Middle.jsx
+│   │   ├── data.js   # 📊 Dummy dataset
+│   ├── App.jsx       # 🚀 Main entry
+│   ├── index.js
+└── package.json
+```
+
+---
+
+## ⚙️ How It Works
+
+### 🖊️ **1. Input Section (Home.jsx)**
+
+* User can type/search by **Order ID, Customer, Product**.
+* Dropdowns for **Payment** and **Status**.
+* Date picker (optional).
+* **Search** button triggers filtering logic.
+* **Clear Filters** resets everything.
+
+### 📊 **2. Data Table (HeroSection.jsx)**
+
+* Displays all filtered results in a clean **table format**.
+* Shows: Order ID, Date, Customer, Product, Price, Payment, and Status.
+
+### 🛠️ **3. Filtering Logic (Home.jsx)**
+
+* Each input updates a **state variable** (e.g. `order`, `customer`, `status`).
+* On clicking **Search**, all filters are applied to `data.js`.
+* The filtered results are passed to `<HeroSection data={filteredData} />`.
+
+---
+
+## 📸 Demo Preview
+
+👉 Search by **Customer Name** → See results instantly.
+👉 Select **Payment = Paid** → Table updates to show only paid orders.
+👉 Clear all filters → Table resets with full data.
+
+---
+## video:
