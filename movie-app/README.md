@@ -1,16 +1,61 @@
-# React + Vite
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+# 🎥 Favorite Movies Manager
 
-Currently, two official plugins are available:
+A **React** app to keep track of your favorite movies! Add, edit, and delete movies with ease, and store them safely in your browser using **localStorage**.  
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+---
 
-## React Compiler
+## ✨ Features
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- **Add Movies:** Quickly add new movies to your list.  
+- **Edit Movies:** Update movie details anytime.  
+- **Delete Movies:** Remove movies you no longer want.  
+- **Persistent Data:** Movies stay in localStorage even after refreshing.  
+- **User Session Info:** See your session details with the `UserSession` component.  
+- **Responsive Design:** Works on desktop, tablet, and mobile.  
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## 🧩 Tech Stack
+
+- **React** – For building UI components  
+- **JavaScript (ES6)** – App logic & state management  
+- **CSS** – Styling the app  
+- **localStorage** – Persistent storage for movies  
+
+---
+
+## 📂 Folder Structure
+
+```
+
+favorite-movies-manager/
+│
+├─ src/
+│  ├─ components/
+│  │  ├─ MovieForm.jsx      # Form to add movies
+│  │  ├─ MovieList.jsx      # Movie list with edit/delete functionality
+│  │  └─ UserSession.jsx    # Displays session info
+│  │
+│  ├─ App.jsx               # Main component
+│  └─ App.css               # Styling
+│
+├─ public/
+│  └─ index.html
+│
+└─ package.json
+
+````
+## 📝 How It Works
+
+* **State Management:** Uses `useState` to manage the `movies` array.
+* **LocalStorage:** Loads movies from localStorage on start, and saves updates automatically.
+* **CRUD Operations:**
+
+  * `addMovie(movie)` – Add a new movie
+  * `deleteMovie(index)` – Remove a movie by its index
+  * `editMovie(index, updatedMovie)` – Update movie info
+
+---
+
+video:
