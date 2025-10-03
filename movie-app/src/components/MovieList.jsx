@@ -32,7 +32,7 @@ export default function MovieList({ movies, deleteMovie, editMovie }) {
                   <input value={editTitle} onChange={(e) => setEditTitle(e.target.value)} />
                   <input value={editGenre} onChange={(e) => setEditGenre(e.target.value)} />
                   <input value={editRating} onChange={(e) => setEditRating(e.target.value)} />
-                  <button className="btn btn-success btn-sm" onClick={() => saveEdit(index)}>Save</button>
+                  <button className="btn btn-secondary btn-sm" onClick={() => saveEdit(index)}>Save</button>
                 </>
               ) : (
                 <>
@@ -40,7 +40,7 @@ export default function MovieList({ movies, deleteMovie, editMovie }) {
                     🎥 {movie.title} | {movie.genre} | ⭐ {movie.rating}
                   </span>
                   <div>
-                    <button className="btn btn-warning btn-sm me-2" onClick={() => handleEdit(index, movie)}>Edit</button>
+                    <button className="btn btn-info btn-sm me-2" onClick={() => handleEdit(index, movie)}>Edit</button>
                     <button className="btn btn-danger btn-sm" onClick={() => deleteMovie(index)}>Delete</button>
                   </div>
                 </>
