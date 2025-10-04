@@ -59,3 +59,6 @@ favorite-movies-manager/
 ---
 
 video:
+
+https://github.com/user-attachments/assets/10e1b47c-081f-4296-a7b8-6aadc80a794d
+
