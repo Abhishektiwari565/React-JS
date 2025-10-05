@@ -10,11 +10,18 @@ export default function CounterProvider({children}) {
      }
 
      const addTodo=(title)=>{
-        let arr=[...todos];
-        arr.push({title:title,isCompleted:false});
-        setTodos(arr);
+      //   let arr=[...todos];
+      //   arr.push({title:title,isCompleted:false});
+      //   setTodos(arr);
+      setTodos((prev) => [...prev, { id: 1, title: title, isCompleted: false }]);
      }
-  return( <CounterContext.Provider value={{count,increment,todos,addTodo}}>
+
+     const removeTodo=(index)=>{
+      let arr=[...todos];
+      arr.splice(index,1);
+      setTodos(arr);
+     }
+  return( <CounterContext.Provider value={{count,increment,todos,addTodo,removeTodo}}>
     {children}
   </CounterContext.Provider>
   )
