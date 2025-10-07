@@ -1,4 +1,4 @@
-import {createSlice} from '@reduxjs/toolkit'
+import {createSlice,createAsyncThunk} from '@reduxjs/toolkit'
 
 const initialState={
     book:[
@@ -9,9 +9,19 @@ const initialState={
     ],
     visitors:450,
     total:120,
-    fav:[]
+    fav:[],
+    isLoading:true,
+    error:null,
+    products:[]
 
 }
+
+export const fetchProducts=createAsyncThunk("products/get",async()=>{
+    const res=await fetch("https://fakestoreapi.com/products")
+    const data=await res.json();
+    return data;
+})
+
 const Book=createSlice({
     name:"Adventure",
     initialState: initialState,
@@ -26,6 +36,17 @@ const Book=createSlice({
             const [index,value]=action.payload;
             state.book[index]=value;
         }
+    },
+    extraReducers:(builder)=>{
+        builder.addCase(fetchProducts.pending,(state,action)=>{
+            state.isLoading=true;
+        }).addCase(fetchProducts.fulfilled,(state,action)=>{
+            state.products=action.payload
+            state.isLoading=false;
+        }).addCase(fetchProducts.rejected,(state,action)=>{
+            state.isLoading=false;
+            state.error="cant detect api..."
+        })
     }
 })
 
