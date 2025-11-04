@@ -18,3 +18,4 @@
 // ->it store data in key:value pair and collection:document pair in database
 // ->it is used when data is dynamic.
 // ->firebase and json server is example 
+ 
