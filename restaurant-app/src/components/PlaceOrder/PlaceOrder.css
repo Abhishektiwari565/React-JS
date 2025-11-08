@@ -1,0 +1,459 @@
+/* =========================
+   Container & Layout
+========================= */
+.place-order-container {
+    min-height: 100vh;
+    background: #0a0f23;
+    color: #f0f0f0;
+    margin-left: 260px;
+    width: calc(100% - 260px);
+    padding: 40px;
+    font-family: "Poppins", sans-serif;
+    transition: all 0.3s ease;
+}
+
+.place-order-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+    flex-wrap: wrap;
+}
+
+.place-order-title {
+    font-size: 2rem;
+    font-weight: 600;
+    color: #ffffff;
+}
+
+/* =========================
+   Header Buttons
+========================= */
+.place-order-buttons {
+    display: flex;
+    gap: 10px;
+}
+
+.add-customer-btn {
+    background: linear-gradient(135deg, #4caf50, #45a049);
+    border: none;
+    border-radius: 10px;
+    padding: 10px 16px;
+    color: #fff;
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-weight: 500;
+}
+
+.add-customer-btn:hover {
+    background: linear-gradient(135deg, #45a049, #4caf50);
+    transform: scale(1.05);
+    box-shadow: 0 4px 12px rgba(76, 175, 80, 0.4);
+}
+
+.menu-btn {
+    background: linear-gradient(135deg, #ff9800, #f57c00);
+    border: none;
+    border-radius: 10px;
+    padding: 10px 16px;
+    color: #fff;
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-weight: 500;
+}
+
+.menu-btn:hover {
+    background: linear-gradient(135deg, #f57c00, #ff9800);
+    transform: scale(1.05);
+    box-shadow: 0 4px 12px rgba(255, 152, 0, 0.4);
+}
+
+/* =========================
+   Orders List & Cards
+========================= */
+.orders-list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    padding: 20px 0;
+}
+
+.order-card {
+    background: #1b2340;
+    padding: 20px;
+    border-radius: 15px;
+    max-width: 550px;
+    width: 100%;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.25);
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+/* =========================
+   Order Header
+========================= */
+.order-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.customer-name {
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: #ffffff;
+}
+
+.order-actions {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+}
+
+/* =========================
+   Action Buttons
+========================= */
+.add-product-btn {
+    background: linear-gradient(135deg, #4caf50, #45a049);
+    border: none;
+    border-radius: 8px;
+    padding: 8px 12px;
+    color: #fff;
+    font-size: 0.8rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-weight: 500;
+}
+
+.add-product-btn:hover {
+    background: linear-gradient(135deg, #45a049, #4caf50);
+    transform: scale(1.05);
+    box-shadow: 0 3px 8px rgba(76, 175, 80, 0.4);
+}
+
+.delete-btn {
+    background: linear-gradient(135deg, #f44336, #d32f2f);
+    border: none;
+    border-radius: 8px;
+    padding: 8px 12px;
+    color: #fff;
+    font-size: 0.8rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-weight: 500;
+}
+
+.delete-btn:hover {
+    background: linear-gradient(135deg, #d32f2f, #f44336);
+    transform: scale(1.05);
+    box-shadow: 0 3px 8px rgba(244, 67, 54, 0.4);
+}
+
+.generate-bill-btn {
+    background: linear-gradient(135deg, #2196f3, #1976d2);
+    border: none;
+    border-radius: 8px;
+    padding: 8px 12px;
+    color: #fff;
+    font-size: 0.8rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-weight: 500;
+}
+
+.generate-bill-btn:hover {
+    background: linear-gradient(135deg, #1976d2, #2196f3);
+    transform: scale(1.05);
+    box-shadow: 0 3px 8px rgba(33, 150, 243, 0.4);
+}
+
+.generate-bill-btn:disabled {
+    background: linear-gradient(135deg, #757575, #9e9e9e);
+    cursor: not-allowed;
+    transform: none;
+    box-shadow: none;
+}
+
+.generate-bill-btn:disabled:hover {
+    background: linear-gradient(135deg, #757575, #9e9e9e);
+    transform: none;
+    box-shadow: none;
+}
+
+/* =========================
+   Form Inputs & Selects
+========================= */
+.order-form-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+    margin: 0 auto 15px;
+    max-width: 700px;
+    width: 100%;
+}
+
+@media (max-width: 900px) {
+    .order-form-grid {
+        grid-template-columns: 1fr;
+        max-width: 100%;
+    }
+}
+
+.order-input,
+.order-select {
+    background-color: #141b33;
+    color: #f0f0f0;
+    border: 1px solid #2e3a68;
+    border-radius: 8px;
+    padding: 8px;
+    font-size: 0.85rem;
+    outline: none;
+    transition: all 0.2s ease;
+}
+
+.order-input:focus,
+.order-select:focus {
+    border-color: #4caf50;
+    box-shadow: 0 0 5px rgba(76, 175, 80, 0.6);
+}
+
+.order-select {
+    background-color: #141b33;
+    color: #ffffff;
+    cursor: pointer;
+    appearance: none;
+}
+
+.order-select option {
+    background-color: #141b33;
+    color: #ffffff;
+    font-size: 0.85rem;
+}
+
+/* =========================
+   Order Items
+========================= */
+.order-items {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-top: 10px;
+}
+
+.order-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #141b33;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.item-info {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.item-image {
+    width: 45px;
+    height: 45px;
+    object-fit: cover;
+    border-radius: 6px;
+}
+
+.item-details {
+    display: flex;
+    flex-direction: column;
+}
+
+.item-title {
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: #ffffff;
+}
+
+.item-calculation {
+    font-size: 0.8rem;
+    color: #a0b0d0;
+}
+
+/* =========================
+   Item Control Buttons
+========================= */
+.item-controls {
+    display: flex;
+    gap: 6px;
+}
+
+.quantity-btn {
+    background: linear-gradient(135deg, #4caf50, #45a049);
+    border: none;
+    color: #fff;
+    border-radius: 6px;
+    padding: 5px 8px;
+    font-size: 0.8rem;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.quantity-btn:hover {
+    background: linear-gradient(135deg, #45a049, #4caf50);
+    transform: scale(1.1);
+}
+
+.quantity-btn:nth-child(2) {
+    background: linear-gradient(135deg, #ff9800, #f57c00);
+}
+
+.quantity-btn:nth-child(2):hover {
+    background: linear-gradient(135deg, #f57c00, #ff9800);
+    transform: scale(1.1);
+}
+
+.remove-btn {
+    background: linear-gradient(135deg, #f44336, #d32f2f);
+    border: none;
+    color: #fff;
+    border-radius: 6px;
+    padding: 5px 8px;
+    font-size: 0.8rem;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.remove-btn:hover {
+    background: linear-gradient(135deg, #d32f2f, #f44336);
+    transform: scale(1.1);
+}
+
+/* =========================
+   Order Summary
+========================= */
+.order-summary {
+    margin-top: 15px;
+    border-top: 1px solid #2e3a68;
+    padding-top: 10px;
+}
+
+.summary-row {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.9rem;
+    color: #a0b0d0;
+    margin-bottom: 5px;
+}
+
+.summary-row.total {
+    font-weight: 600;
+    color: #ffffff;
+    border-top: 1px solid #4caf50;
+    padding-top: 5px;
+    font-size: 1rem;
+}
+
+/* =========================
+   No Orders Placeholder
+========================= */
+.no-orders {
+    text-align: center;
+    color: #a0b0d0;
+    font-size: 1rem;
+    margin-top: 40px;
+    padding: 40px 20px;
+}
+
+.no-orders p {
+    margin: 0;
+    font-size: 1.1rem;
+}
+
+/* =========================
+   Responsive Design
+========================= */
+@media (max-width: 768px) {
+    .place-order-container {
+        margin-left: 0;
+        width: 100%;
+        padding: 20px 15px;
+    }
+
+    .place-order-header {
+        flex-direction: column;
+        gap: 15px;
+        align-items: flex-start;
+    }
+
+    .place-order-buttons {
+        width: 100%;
+        justify-content: flex-start;
+    }
+
+    .order-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+
+    .order-actions {
+        width: 100%;
+        justify-content: flex-start;
+    }
+
+    .order-item {
+        flex-direction: column;
+        gap: 10px;
+        align-items: flex-start;
+    }
+
+    .item-controls {
+        align-self: flex-end;
+    }
+}
+
+/* =========================
+   Loading States
+========================= */
+@keyframes pulse {
+    0% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0.7;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+.generate-bill-btn.loading {
+    animation: pulse 1.5s infinite;
+    background: linear-gradient(135deg, #757575, #9e9e9e);
+}
+
+/* =========================
+   Success States
+========================= */
+.generate-bill-btn.success {
+    background: linear-gradient(135deg, #4caf50, #45a049);
+}
+
+/* =========================
+   Error States
+========================= */
+.order-input:invalid {
+    border-color: #f44336;
+}
+
+.order-input:valid {
+    border-color: #4caf50;
+}

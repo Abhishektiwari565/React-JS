@@ -1,16 +1,29 @@
-import React from 'react'
-import Navbar from './components/Navbar'
-import Hero from './components/Hero'
-import Menu from './components/Menu'
-import Footer from './components/Footer'
+import { BrowserRouter as Router, Routes, Route } from "react-router";
+import Front from "./components/Front/Front";
+import Login from "./components/Login/Login";
+import ManagerDashboard from "./pages/ManagerDashboard/ManagerDashboard";
+import EmployeeDashboard from "./pages/EmployeeDashboard/EmployeeDashboard";
+import PrivateRoute from "./components/PrivateRoute";
 
-export default function App() {
+function App() {
   return (
-    <div>
-      <Navbar/>
-      <Hero/>
-      <Menu/>
-      <Footer/>
-    </div>
-  )
+    <Router>
+      <Routes>
+        <Route path="/" element={<Front />} />
+        <Route path="/login" element={<Login />} />
+
+        {/* Manager Protected Route */}
+        <Route element={<PrivateRoute role="manager" />}>
+          <Route path="/manager-dashboard/*" element={<ManagerDashboard />} />
+        </Route>
+
+        {/* Employee Protected Route */}
+        <Route element={<PrivateRoute role="employee" />}>
+          <Route path="/employee-dashboard/*" element={<EmployeeDashboard />} />
+        </Route>
+      </Routes>
+    </Router>
+  );
 }
+
+export default App;

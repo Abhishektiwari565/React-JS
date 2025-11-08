@@ -1,0 +1,195 @@
+/* NavbarManager.css */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&family=Playfair+Display:wght@400;500;600;700&display=swap");
+
+.navbar-vertical {
+    position: fixed;
+    left: 0;
+    top: 0;
+    height: 100vh;
+    width: 280px;
+    background: linear-gradient(180deg, #0a0a0a 0%, #1a1a1a 100%);
+    border-right: 1px solid rgba(255, 255, 255, 0.1);
+    display: flex;
+    flex-direction: column;
+    padding: 30px 0;
+    z-index: 1000;
+    font-family: "Poppins", sans-serif;
+}
+
+/* Logo Section */
+.nav-logo {
+    text-align: center;
+    margin-bottom: 40px;
+    padding: 0 25px;
+}
+
+.logo-img-circle {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    margin: 0 auto 15px;
+    padding: 5px;
+    background: linear-gradient(135deg, #ffd700 0%, #e6c200 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.logo-img {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid #1a1a1a;
+}
+
+.brand-name {
+    font-family: "Playfair Display", serif;
+    font-size: 1.8rem;
+    color: #ffd700;
+    margin: 0 0 5px 0;
+    text-shadow: 0 0 20px rgba(255, 215, 0, 0.3);
+}
+
+.brand-tagline {
+    color: #b8b8b8;
+    font-size: 0.8rem;
+    font-weight: 300;
+    margin: 0;
+    font-style: italic;
+}
+
+/* Navigation Links */
+.nav-links {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    padding: 0 20px;
+}
+
+.nav-link {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 15px 20px;
+    color: #b8b8b8;
+    text-decoration: none;
+    border-radius: 12px;
+    transition: all 0.3s ease;
+    border: 1px solid transparent;
+}
+
+.nav-link:hover {
+    background: rgba(255, 255, 255, 0.05);
+    color: #e8e8e8;
+    border-color: rgba(255, 215, 0, 0.1);
+    transform: translateX(5px);
+}
+
+.nav-link.active {
+    background: rgba(255, 215, 0, 0.1);
+    color: #ffd700;
+    border-color: rgba(255, 215, 0, 0.3);
+    box-shadow: 0 5px 15px rgba(255, 215, 0, 0.1);
+}
+
+.nav-icon {
+    font-size: 1.2rem;
+    width: 24px;
+    text-align: center;
+}
+
+.nav-text {
+    font-weight: 500;
+    font-size: 0.95rem;
+}
+
+/* Logout Section */
+.nav-footer {
+    padding: 0 20px;
+    margin-top: auto;
+}
+
+.logout-btn {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    width: 100%;
+    padding: 15px 20px;
+    background: rgba(255, 77, 79, 0.1);
+    color: #ff6b6b;
+    border: 1px solid rgba(255, 77, 79, 0.3);
+    border-radius: 12px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-family: "Poppins", sans-serif;
+    font-size: 0.95rem;
+    font-weight: 500;
+}
+
+.logout-btn:hover {
+    background: rgba(255, 77, 79, 0.2);
+    color: #ff5252;
+    border-color: rgba(255, 77, 79, 0.5);
+    transform: translateX(5px);
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+    .navbar-vertical {
+        width: 250px;
+    }
+}
+
+@media (max-width: 768px) {
+    .navbar-vertical {
+        width: 70px;
+        padding: 20px 0;
+    }
+
+    .nav-logo {
+        padding: 0 10px;
+    }
+
+    .logo-img-circle {
+        width: 50px;
+        height: 50px;
+        margin-bottom: 10px;
+    }
+
+    .logo-img {
+        width: 44px;
+        height: 44px;
+    }
+
+    .brand-name,
+    .brand-tagline,
+    .nav-text {
+        display: none;
+    }
+
+    .nav-links {
+        padding: 0 10px;
+    }
+
+    .nav-link {
+        justify-content: center;
+        padding: 15px 10px;
+    }
+
+    .nav-footer {
+        padding: 0 10px;
+    }
+
+    .logout-btn {
+        justify-content: center;
+        padding: 15px 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    .navbar-vertical {
+        width: 60px;
+    }
+}
