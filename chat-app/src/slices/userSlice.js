@@ -11,7 +11,7 @@ export const signIn=createAsyncThunk("user/signin",async({email,password})=>{
    return user;
 });
 const initialState={
-    user:[],
+    users:[],
     isLoading:false,
 }
 const userSlice =createSlice({
@@ -22,6 +22,7 @@ const userSlice =createSlice({
             state.isLoading=true;
         }).addCase(signIn.fulfilled,(state)=>{
             state.isLoading=false;
+            alert("user signin successfully !!")
         }).addCase(signIn.rejected,(state)=>{
             state.isLoading=false,
             state.error="signin failes !!"
