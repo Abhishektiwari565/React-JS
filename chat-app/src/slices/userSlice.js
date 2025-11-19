@@ -42,7 +42,7 @@ const userSlice = createSlice({
         builder.addCase(signIn.pending, (state) => {
             state.isLoading = true;
         }).addCase(signIn.fulfilled, (state, action) => {
-            // state.users.push(action.payload)
+            state.users.push(action.payload)
             state.isLoading = false;
             alert("user signin successfully !!")
         }).addCase(signIn.rejected, (state) => {

@@ -23,7 +23,9 @@ export default function SignIn() {
     </div>
       <input type="text" placeholder='email' onChange={(e)=>setEmail(e.target.value)} />
       <input type="text" placeholder='password' onChange={(e)=>setPassword(e.target.value)} />
-      <button onClick={()=>dispatch(signIn({email,password}))}>Sign In</button>
+      <button onClick={()=>{
+        dispatch(signIn({email,password}))
+      }}>Sign In</button>
     </div>
   )
 }
