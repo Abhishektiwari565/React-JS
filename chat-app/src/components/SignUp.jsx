@@ -12,7 +12,7 @@ export default function SignUp() {
         <h3>Sign Up</h3>
         <div>
             {
-                users.map((user)=><h2>
+                users.map((user,index)=><h2 key={index}>
                     {
                         user.email
                     }

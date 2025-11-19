@@ -1,18 +1,23 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import {useDispatch,useSelector} from 'react-redux'
-import {signIn} from '../slices/userSlice'
+import {signIn,fetchUser} from '../slices/userSlice'
 
 export default function SignIn() {
+
+
     const dispatch=useDispatch();
     const{users} =useSelector((state)=>state.user)
     const [email,setEmail]= useState("");
     const [password,setPassword]= useState("");
 
+    useEffect(()=>{
+  dispatch(fetchUser());
+},[])
   return (
     
     <div>
         <div>
-        {users.map((user)=><h2>
+        {users.map((user,i)=><h2 key={i}>
            { user.email}
         </h2>)}
     </div>
