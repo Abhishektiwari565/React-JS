@@ -1,7 +1,7 @@
 import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
 import { signInWithEmailAndPassword, createUserWithEmailAndPassword } from 'firebase/auth'
 import { auth, db } from '../firebase'
-import { addDoc, collection, getDocs } from 'firebase/firestore'
+import { addDoc, collection, getDocs ,setDoc,doc } from 'firebase/firestore'
 
 export const signIn = createAsyncThunk("user/signin", async ({ email, password }) => {
     const userCredential = await signInWithEmailAndPassword(auth, email, password)
@@ -9,7 +9,9 @@ export const signIn = createAsyncThunk("user/signin", async ({ email, password }
         name: userCredential.user.displayName,
         email: userCredential.user.email,
     }
-    await addDoc(collection(db, "users"), user)
+    
+    // await addDoc(collection(db, "users"), user)
+    await setDoc(doc(db,"users",email),user)
     return user;
 });
 
@@ -19,7 +21,6 @@ export const signUp = createAsyncThunk("user/signup", async ({ email, password }
         name: userCredential.user.displayName,
         email: userCredential.user.email,
     }
-     
     return user;
 });
 
@@ -33,16 +34,28 @@ export const fetchUser = createAsyncThunk("user/fetch", async () => {
 
 const initialState = {
     users: [],
+    currentUser:{},
     isLoading: false,
 }
 const userSlice = createSlice({
     name: "user",
     initialState: initialState,
+    reducers:{
+        getUser:(state)=>{
+           state.currentUser=JSON.parse( localStorage.getItem("user")||"{}")
+        }
+    },
     extraReducers: (builder) => {
         builder.addCase(signIn.pending, (state) => {
             state.isLoading = true;
         }).addCase(signIn.fulfilled, (state, action) => {
-            state.users.push(action.payload)
+            const user=action.payload;
+            const isCheck=state.users.find((e)=>e.email==user.email);
+            if(!isCheck){
+                state.users.push(user);
+            }
+            localStorage.setItem("user",JSON.stringify(user));
+            state.currentUser=user;
             state.isLoading = false;
             alert("user signin successfully !!")
         }).addCase(signIn.rejected, (state) => {
@@ -53,6 +66,7 @@ const userSlice = createSlice({
         }).addCase(signUp.fulfilled, (state, action) => {
             state.users.push(action.payload)
             state.isLoading = false;
+            
             alert("sign up successfully !")
         }).addCase(signUp.rejected, (state) => {
             state.isLoading = false;
@@ -69,3 +83,4 @@ const userSlice = createSlice({
     },
 });
 export default userSlice.reducer;
+export const {getUser}=userSlice.actions

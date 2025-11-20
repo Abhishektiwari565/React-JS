@@ -1,0 +1,51 @@
+.chat-view {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.chat-page {
+  width: 450px;
+  height: 600px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  padding: 15px;
+  background: #b5a2eb;
+}
+
+/* User email at top */
+.chat-page h3 {
+  margin: 0 0 15px 0;
+  text-align: center;
+}
+
+/* Bottom area (input + btn) */
+.input-area {
+  margin-top: auto; /* Push to bottom */
+  display: flex;
+  gap: 5px;
+}
+
+.input-area input {
+  width: 80%;
+  padding: 10px;
+  border: 1px solid #bbb;
+  border-radius: 5px;
+}
+
+.input-area button {
+  width: 20%;
+  border: none;
+  background: #4285f4;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.input-area button:hover {
+  background: #357ae8;
+}
