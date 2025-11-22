@@ -43,6 +43,13 @@ const userSlice = createSlice({
     reducers:{
         getUser:(state)=>{
            state.currentUser=JSON.parse( localStorage.getItem("user")||"{}")
+        },
+        getCurrentUser:(state)=>{
+            state.currentUser={
+                name:state.currentUser.displayName,
+                email:state.currentUser.email,
+
+            };
         }
     },
     extraReducers: (builder) => {
@@ -83,4 +90,4 @@ const userSlice = createSlice({
     },
 });
 export default userSlice.reducer;
-export const {getUser}=userSlice.actions
+export const {getUser,getCurrentUser}=userSlice.actions
