@@ -3,7 +3,9 @@ import {db} from '../firebase';
 import {addDoc,doc,setDoc,getDocs,collection} from 'firebase/firestore'
 
 export const readMessages=createAsyncThunk("chat/read",async({sender,receiver})=>{
-    const docId=sender+"_"+receiver;
+     const user=[sender,receiver];
+    user.sort();
+    const docId=user[0]+"_"+user[1];
    try{
      const snapshots=await getDocs(collection(db,"chatroom",docId,"chats"))
     const chatList=snapshots.docs.map((snap)=>snap.data())
@@ -16,7 +18,9 @@ export const readMessages=createAsyncThunk("chat/read",async({sender,receiver})=
 
 
 export const sendMessage=createAsyncThunk("chat/send",async({message,sender,receiver})=>{
-    const docId=sender+"_"+receiver;
+    const user=[sender,receiver];
+    user.sort();
+    const docId=user[0]+"_"+user[1];
    const chatId = Date.now().toString();
     try {
       await setDoc(doc(db, "chatroom", docId, "chats", chatId), {
