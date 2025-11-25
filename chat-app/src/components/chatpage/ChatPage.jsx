@@ -96,7 +96,7 @@ export default function ChatPage() {
 
         <div className="input-area">
           <input
-            type="text"
+            type="text" placeholder='enter text'
             value={message}
             onChange={(e) => setMessage(e.target.value)}
           />

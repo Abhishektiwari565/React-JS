@@ -1,40 +1,47 @@
 import React, { useEffect } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
-import { fetchUser ,getUser} from '../slices/userSlice'
-import {useNavigate} from 'react-router'
+import { fetchUser, getUser } from '../slices/userSlice'
+import { useNavigate } from 'react-router'
+import './components.css'
 
 export default function UserHomePage() {
-    const navigate=useNavigate();
+    const navigate = useNavigate();
     let { users, currentUser } = useSelector(state => state.user);
     const dispatch = useDispatch();
+
     useEffect(() => {
         dispatch(getUser());
         dispatch(fetchUser());
-    }, [])
-    return (
-         
-       <div>    
-        <h2>User:{currentUser.email}</h2>
-          <div className='w-100 bg-black'>
-               <ol className="list-group list-group-numbered">
-                {users.map((user, index) => {
-                    if(user.email!=currentUser.email){
-                          return<li key={index} onClick={()=>navigate("/chat",{state:user})} className="list-group-item d-flex justify-content-between align-items-start">
-                        <div className="ms-2 me-auto">
-                            <div className="fw-bold">{user.email}</div>
-                            Cras justo odio
-                        </div>
-                        <span className="badge bg-primary rounded-pill">14</span>
-                    </li>
-                    }
-                    return <></>
-                }
-                  
-                )}
-            </ol>
-         </div>
-       </div>
-        
+    }, []);
 
-    )
+    return (
+        <div className="home-container">
+            <div className="home-header">
+                <h2>Welcome, <span>{currentUser.email}</span></h2>
+            </div>
+            <div className="users-wrapper">
+                <h3 className="users-title">Available Users</h3>
+                <ol className="users-list">
+                    {users.map((user, index) => {
+                        if (user.email !== currentUser.email) {
+                            return (
+                                <li
+                                    key={index}
+                                    onClick={() => navigate("/chat", { state: user })}
+                                    className="user-item"
+                                >
+                                    <div className="user-info">
+                                        <div className="user-email">{user.email}</div>
+                                        <div className="user-status">Tap to chat</div>
+                                    </div>
+                                    <span className="user-badge">● Online</span>
+                                </li>
+                            );
+                        }
+                        return <></>;
+                    })}
+                </ol>
+            </div>
+        </div>
+    );
 }

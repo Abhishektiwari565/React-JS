@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import {signUp} from '../slices/userSlice'
 import {useDispatch,useSelector} from 'react-redux'
+import './components.css'
 
 export default function SignUp() {
     const dispatch=useDispatch()
@@ -8,22 +9,24 @@ export default function SignUp() {
     const [email,setEmail]=useState("");
     const [password,setPassword]=useState("");
   return (
-    <div>
-        <h3>Sign Up</h3>
-        <div>
-            {
-                users.map((user,index)=><h2 key={index}>
-                    {
-                        user.email
-                    }
-                </h2>)
-            }
-        </div>
-      <input type="text" placeholder='email' value={email} onChange={(e)=>setEmail(e.target.value)} />
-      <br />
-      <input type="text" placeholder='password' value={password} onChange={(e)=>setPassword(e.target.value)} />
-      <hr />
-      <button onClick={()=>dispatch(signUp({email,password}))}>Sign Up</button>
-    </div>
+
+<div className="auth-container">
+  <div className="auth-box">
+    <h3>Sign Up</h3>
+
+    <input className="auth-input" type="text" placeholder="email"
+      value={email} onChange={(e)=>setEmail(e.target.value)} />
+
+    <input className="auth-input" type="text" placeholder="password"
+      value={password} onChange={(e)=>setPassword(e.target.value)} />
+
+    <button className="auth-btn"
+      onClick={() => dispatch(signUp({ email, password }))}>
+      Sign Up
+    </button>
+  </div>
+</div>
+
+
   )
 }

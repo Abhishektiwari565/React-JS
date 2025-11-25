@@ -1,0 +1,158 @@
+/* Page Centering */
+.auth-container {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #f3f4f6;
+  font-family: Arial, sans-serif;
+}
+
+/* Card Box */
+.auth-box {
+  width: 350px;
+  padding: 25px;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  text-align: center;
+}
+
+/* Heading */
+.auth-box h1,
+.auth-box h3 {
+  margin-bottom: 20px;
+  color: #333;
+}
+
+/* Inputs */
+.auth-input {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  font-size: 15px;
+  outline: none;
+}
+
+.auth-input:focus {
+  border-color: #4f46e5;
+}
+
+/* Button */
+.auth-btn {
+  width: 100%;
+  padding: 10px;
+  background: #4f46e5;
+  border: none;
+  color: white;
+  font-size: 16px;
+  margin-top: 10px;
+  cursor: pointer;
+  border-radius: 6px;
+}
+
+.auth-btn:hover {
+  background: #4338ca;
+}
+
+/* for homepage  */
+
+/* --- MAIN CONTAINER --- */
+.home-container {
+  width: 100%;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #1d1f27, #2b2e3a);
+  padding: 30px;
+  color: #fff;
+  font-family: "Poppins", sans-serif;
+}
+
+/* --- HEADER SECTION --- */
+.home-header {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.home-header h2 {
+  font-size: 32px;
+  font-weight: 600;
+  margin: 0;
+}
+
+.home-header span {
+  color: #03e9f4;
+  font-weight: bold;
+}
+
+/* --- USERS WRAPPER BOX --- */
+.users-wrapper {
+  width: 80%;
+  margin: auto;
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(12px);
+  padding: 25px;
+  border-radius: 18px;
+  box-shadow: 0px 0px 20px rgba(0, 255, 255, 0.2);
+  transition: 0.3s ease;
+}
+
+/* TITLE */
+.users-title {
+  text-align: center;
+  font-size: 24px;
+  margin-bottom: 20px;
+  letter-spacing: 1px;
+}
+
+/* --- USERS LIST --- */
+.users-list {
+  list-style: none;
+  padding: 0;
+}
+
+/* EACH USER ITEM */
+.user-item {
+  background: rgba(255, 255, 255, 0.08);
+  padding: 18px;
+  margin-bottom: 12px;
+  border-radius: 12px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+
+  transition: transform 0.15s ease, background 0.25s ease;
+}
+
+.user-item:hover {
+  transform: translateY(-3px);
+  background: rgba(255, 255, 255, 0.16);
+}
+
+/* USER INFO LEFT SIDE */
+.user-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.user-email {
+  font-size: 18px;
+  font-weight: 600;
+  color: #03e9f4;
+}
+
+.user-status {
+  font-size: 13px;
+  opacity: 0.8;
+}
+
+/* BADGE (RIGHT SIDE) */
+.user-badge {
+  color: #00ff95;
+  font-size: 14px;
+  font-weight: bold;
+}
+
