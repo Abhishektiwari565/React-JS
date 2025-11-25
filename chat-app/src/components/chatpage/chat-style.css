@@ -49,3 +49,23 @@
 .input-area button:hover {
   background: #357ae8;
 }
+
+.message-div{
+  margin: 10px;
+  display: flex;
+}
+
+.message-end{
+  justify-content: end;
+}
+
+.message-start{
+  justify-content: start;
+}
+
+.message-box{
+  padding: 10px;
+  background-color: white;
+  border-radius: 10px;
+
+}
