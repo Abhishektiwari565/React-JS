@@ -21,6 +21,7 @@ Firebase Authentication (Email & Password)
 
 Secure session handling
 
+
 💬 Real-time Messaging
 
 Messages update instantly
