@@ -1,0 +1,499 @@
+/* =========================
+   Layout and Container
+========================= */
+.menu-container {
+    min-height: 100vh;
+    background: #0a0f23;
+    color: #f0f0f0;
+    margin-left: 260px;
+    width: calc(100% - 260px);
+    transition: all 0.3s ease;
+    padding: 40px;
+    font-family: "Poppins", sans-serif;
+}
+
+.menu-layout {
+    display: flex;
+    gap: 25px;
+    margin-top: 30px;
+}
+
+.menu-section {
+    flex: 1 1 65%;
+}
+
+/* Sidebar */
+.order-sidebar {
+    flex: 1 1 35%;
+    background: #1b2340;
+    padding: 25px;
+    border-radius: 15px;
+    overflow: visible;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+    .menu-layout {
+        flex-direction: column;
+    }
+
+    .menu-section,
+    .order-sidebar {
+        width: 100%;
+    }
+}
+
+/* =========================
+   Header
+========================= */
+.menu-header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.menu-title {
+    font-size: 2rem;
+    color: #ffffff;
+    font-weight: 600;
+}
+
+.menu-subtitle {
+    color: #a0b0d0;
+    font-size: 1rem;
+}
+
+/* =========================
+   Search Box & Categories
+========================= */
+.search-box {
+    display: flex;
+    align-items: center;
+    background: #1b2340;
+    padding: 10px 14px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+.search-input {
+    flex: 1;
+    background: transparent;
+    border: none;
+    outline: none;
+    color: #f0f0f0;
+    font-size: 0.95rem;
+    margin-left: 10px;
+}
+
+.category-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.category-btn {
+    background: #141b33;
+    color: #f0f0f0;
+    border: none;
+    border-radius: 8px;
+    padding: 8px 14px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    transition: 0.3s;
+}
+
+.category-btn.active,
+.category-btn:hover {
+    background: #4caf50;
+    color: white;
+}
+
+/* =========================
+   Menu Grid & Cards
+========================= */
+.menu-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+}
+
+.menu-card {
+    background: #1b2340;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.25);
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.menu-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 18px rgba(76, 175, 80, 0.3);
+}
+
+/* Fixed image size */
+.menu-card-image img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+}
+
+.menu-card-content {
+    padding: 14px;
+    text-align: center;
+}
+
+.item-name {
+    font-size: 1rem;
+    font-weight: 500;
+    color: #ffffff;
+    margin-bottom: 6px;
+}
+
+.item-price {
+    color: #4caf50;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+/* =========================
+   Add to Order Button (GREEN)
+========================= */
+.add-to-order-btn {
+    background: linear-gradient(135deg, #4caf50, #45a049);
+    border: none;
+    border-radius: 10px;
+    padding: 10px 16px;
+    color: #fff;
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-weight: 500;
+    width: 100%;
+}
+
+.add-to-order-btn:hover {
+    background: linear-gradient(135deg, #45a049, #4caf50);
+    transform: scale(1.05);
+    box-shadow: 0 4px 12px rgba(76, 175, 80, 0.4);
+}
+
+/* =========================
+   Current Order Section
+========================= */
+.order-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #fff;
+    margin-bottom: 15px;
+}
+
+.order-sidebar {
+    height: fit-content;
+}
+
+.order-id {
+    background: #ff9800;
+    padding: 4px 10px;
+    border-radius: 8px;
+    font-size: 0.8rem;
+    color: white;
+    font-weight: 600;
+}
+
+.order-details-form .form-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    margin-bottom: 15px;
+}
+
+.order-input,
+.order-select {
+    background: #141b33;
+    border: 1px solid #2e3a68;
+    color: #f0f0f0;
+    border-radius: 8px;
+    padding: 8px;
+    font-size: 0.85rem;
+}
+
+.order-input.full-width {
+    grid-column: span 2;
+}
+
+/* =========================
+   Order Items
+========================= */
+.items-list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.order-item {
+    background: #141b33;
+    border-radius: 10px;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.item-info {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.item-image {
+    width: 45px;
+    height: 45px;
+    border-radius: 6px;
+    object-fit: cover;
+}
+
+.item-details {
+    display: flex;
+    flex-direction: column;
+}
+
+.item-title {
+    font-size: 0.9rem;
+    color: #fff;
+}
+
+.item-calculation {
+    color: #a0b0d0;
+    font-size: 0.8rem;
+}
+
+/* =========================
+   Control Buttons (Different Colors)
+========================= */
+.item-controls {
+    display: flex;
+    gap: 6px;
+}
+
+.control-btn {
+    border: none;
+    border-radius: 8px;
+    padding: 5px 8px;
+    cursor: pointer;
+    transition: 0.2s;
+    font-size: 0.8rem;
+    color: white;
+}
+
+.control-btn.add {
+    background: #4caf50;
+}
+
+.control-btn.add:hover {
+    background: #45a049;
+    transform: scale(1.1);
+}
+
+.control-btn.remove {
+    background: #ff9800;
+}
+
+.control-btn.remove:hover {
+    background: #f57c00;
+    transform: scale(1.1);
+}
+
+.control-btn.delete {
+    background: #f44336;
+}
+
+.control-btn.delete:hover {
+    background: #d32f2f;
+    transform: scale(1.1);
+}
+
+/* =========================
+   Order Summary
+========================= */
+.order-summary {
+    margin-top: 15px;
+    border-top: 1px solid #2e3a68;
+    padding-top: 10px;
+}
+
+.summary-row {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.9rem;
+    color: #a0b0d0;
+    margin-bottom: 5px;
+}
+
+.summary-row.total {
+    font-weight: 600;
+    color: #fff;
+    border-top: 1px solid #4caf50;
+    padding-top: 5px;
+    font-size: 1rem;
+}
+
+/* =========================
+   Place Order Button (ORANGE/SUCCESS)
+========================= */
+.place-order-btn {
+    margin-top: 15px;
+    background: linear-gradient(135deg, #ff9800, #ff5722);
+    color: white;
+    border: none;
+    border-radius: 12px;
+    padding: 12px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.place-order-btn:hover {
+    background: linear-gradient(135deg, #ff5722, #ff9800);
+    transform: scale(1.03);
+    box-shadow: 0 0 15px rgba(255, 152, 0, 0.6);
+}
+
+/* =========================
+   FIXED INPUTS & SELECTS
+========================= */
+
+/* Ensure inputs and dropdowns always stay clickable */
+.order-input,
+.order-select {
+    position: relative;
+    z-index: 5;
+    background-color: #0e1430;
+    color: #ffffff;
+    border: 1px solid #2e3a68;
+    border-radius: 8px;
+    padding: 8px;
+    font-size: 0.85rem;
+    outline: none;
+    transition: all 0.2s ease;
+}
+
+.order-input:focus,
+.order-select:focus {
+    border-color: #4caf50;
+    box-shadow: 0 0 6px rgba(76, 175, 80, 0.6);
+}
+
+/* Full-width address field */
+.order-input.full-width {
+    grid-column: span 2;
+}
+
+/* Proper dropdown styling */
+.order-select {
+    background-color: #0e1430;
+    color: #ffffff;
+    cursor: pointer;
+    appearance: none;
+}
+
+.order-select option {
+    background-color: #0e1430;
+    color: #ffffff;
+    font-size: 0.85rem;
+}
+
+/* Fix focus visibility */
+.order-input::placeholder {
+    color: #a0b0d0;
+}
+
+.order-input:focus::placeholder {
+    color: transparent;
+}
+
+/* =========================
+   Empty States
+========================= */
+.empty-order {
+    text-align: center;
+    padding: 40px 20px;
+    color: #a0b0d0;
+}
+
+.empty-order-icon {
+    font-size: 3rem;
+    margin-bottom: 15px;
+}
+
+.empty-items {
+    text-align: center;
+    padding: 20px;
+    color: #a0b0d0;
+    font-style: italic;
+}
+
+/* Background shapes should not block clicks */
+.menu-background .bg-shape {
+    pointer-events: none;
+}
+
+/* Menu cards clickable */
+.menu-card {
+    cursor: pointer;
+    position: relative;
+    z-index: 1;
+}
+
+/* Loading Animation */
+.menu-container.loaded .menu-card,
+.menu-container.loaded .order-sidebar {
+    animation: fadeInUp 0.6s ease-out;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Error States */
+.order-input:invalid {
+    border-color: #f44336;
+}
+
+.order-input:valid {
+    border-color: #4caf50;
+}
+
+/* Mobile responsive improvements */
+@media (max-width: 768px) {
+    .menu-container {
+        margin-left: 0;
+        width: 100%;
+        padding: 20px 15px;
+    }
+
+    .menu-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .form-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .order-input.full-width {
+        grid-column: 1;
+    }
+}

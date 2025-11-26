@@ -27,7 +27,7 @@ export default function Album() {
               <p className="card-text">{data.description}</p>
               <div className="d-flex justify-content-between align-items-center">
                 <div className="btn-group">
-                  <button type="button" className="btn btn-sm btn-info"><a href={data.url}>learn more</a></button>
+                  <button type="button" className="btn btn-sm btn-info "><a className='text-decoration: none' href={data.url}>learn more</a></button>
                 </div>
               </div>
             </div>
