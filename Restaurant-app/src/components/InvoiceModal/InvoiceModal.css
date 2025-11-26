@@ -1,0 +1,224 @@
+.invoice-modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    overflow-y: auto;
+    padding: 40px 20px;
+    z-index: 10000;
+}
+
+.invoice-modal-content {
+    background: #ffffff;
+    color: #000000;
+    border-radius: 15px;
+    max-width: 900px;
+    width: 100%;
+    padding: 30px 40px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
+    font-family: "Poppins", sans-serif;
+}
+
+.invoice-pdf-content {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.invoice-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    min-height: 150px;
+    /* ensures header never collapses */
+}
+
+.brand-section {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.restaurant-logo {
+    height: 120px;
+    width: auto;
+    object-fit: contain;
+}
+
+.brand-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.restaurant-name {
+    font-size: 2.2rem;
+    margin: 0;
+}
+
+.tagline {
+    font-size: 1rem;
+    color: #555555;
+    margin: 4px 0 0 0;
+}
+
+.website {
+    font-size: 0.9rem;
+    color: #777777;
+}
+
+.invoice-meta h2 {
+    font-size: 1.8rem;
+    margin: 0 0 8px 0;
+}
+
+.invoice-meta p {
+    margin: 2px 0;
+}
+
+.details-grid {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.customer-details,
+.order-details {
+    flex: 1;
+    min-width: 250px;
+}
+
+.items-table table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.items-table th,
+.items-table td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    font-size: 0.9rem;
+    text-align: left;
+}
+
+.invoice-totals {
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    max-width: 400px;
+    align-self: flex-end;
+}
+
+.total-row {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.95rem;
+}
+
+.total-row.grand-total {
+    font-weight: 600;
+    font-size: 1rem;
+}
+
+.invoice-footer {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 30px;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.signature-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.signature-line {
+    width: 180px;
+    height: 2px;
+    background: #000;
+    margin-bottom: 5px;
+}
+
+.thank-you h3 {
+    margin: 0 0 5px 0;
+    font-size: 1.1rem;
+}
+
+.thank-you p {
+    margin: 2px 0;
+    font-size: 0.9rem;
+}
+
+.invoice-actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.download-btn,
+.close-btn {
+    padding: 8px 15px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    background: linear-gradient(135deg, #3a7bd5, #3a6073);
+    color: #fff;
+    font-size: 0.9rem;
+    transition: all 0.3s ease;
+}
+
+.download-btn:hover,
+.close-btn:hover {
+    transform: scale(1.05);
+    background: linear-gradient(135deg, #4a8ff0, #3a7bd5);
+}
+
+@media (max-width: 700px) {
+    .invoice-header {
+        flex-direction: column;
+        align-items: center;
+        min-height: 200px;
+    }
+
+    .details-grid {
+        flex-direction: column;
+    }
+
+    .invoice-totals {
+        align-self: center;
+        max-width: 100%;
+    }
+
+    .brand-info {
+        text-align: center;
+    }
+}
+
+.invoice-modal-overlay {
+    position: fixed;
+    /* stays on top of everything */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    overflow-y: auto;
+    padding: 40px 20px;
+    z-index: 99999;
+    /* make sure it's higher than navbar */
+}

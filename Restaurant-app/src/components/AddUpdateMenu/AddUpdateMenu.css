@@ -1,0 +1,346 @@
+/* Add/Update Menu Page Layout */
+.add-update-menu-wrapper {
+    display: flex;
+    flex-direction: column;
+    padding: 30px;
+    margin-left: 260px;
+    /* space for vertical navbar */
+    background-color: #141827;
+    color: #e0e0e0;
+    min-height: 100vh;
+    box-sizing: border-box;
+    transition: margin-left 0.3s ease;
+}
+
+.navbar-vertical.collapsed~.add-update-menu-wrapper {
+    margin-left: 80px;
+}
+
+/* Header */
+.form-header {
+    margin-bottom: 25px;
+}
+
+.form-title {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: #e0e0e0;
+}
+
+.form-subtitle {
+    font-size: 0.95rem;
+    color: #a0a0a0;
+}
+
+/* Main Form Layout */
+.form-container {
+    display: flex;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+/* Left Column - Image Upload */
+.image-section {
+    flex: 1 1 300px;
+    max-width: 400px;
+}
+
+.image-upload-card {
+    background-color: #1a1f2e;
+    border-radius: 12px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.4);
+}
+
+.section-title {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #3a7bd5;
+    margin-bottom: 10px;
+}
+
+.image-upload-area {
+    position: relative;
+    height: 220px;
+    border: 2px dashed #3a7bd5;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    background-color: #141827;
+}
+
+.image-upload-area.drag-over {
+    background-color: #232a3e;
+}
+
+.image-upload-area.has-image {
+    border: none;
+}
+
+.file-input {
+    display: none;
+}
+
+.upload-placeholder {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: #a0a0a0;
+    text-align: center;
+}
+
+.upload-icon {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+.upload-text {
+    font-weight: 600;
+}
+
+.upload-subtext,
+.upload-hint {
+    font-size: 0.8rem;
+    color: #7a7a7a;
+}
+
+.image-preview {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.preview-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 12px;
+}
+
+.image-overlay {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    background: rgba(0, 0, 0, 0.4);
+    padding: 5px 0;
+    color: #fff;
+    font-size: 0.85rem;
+    border-bottom-left-radius: 12px;
+    border-bottom-right-radius: 12px;
+}
+
+/* Right Column - Form */
+.form-section {
+    flex: 2 1 500px;
+    min-width: 300px;
+}
+
+.menu-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.form-section-card {
+    background-color: #1a1f2e;
+    border-radius: 12px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.4);
+}
+
+.form-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.form-label {
+    font-size: 0.85rem;
+    color: #a0a0a0;
+}
+
+.form-input,
+.form-textarea {
+    padding: 10px 12px;
+    border-radius: 8px;
+    border: none;
+    background-color: #232a3e;
+    color: #e0e0e0;
+    font-size: 0.95rem;
+    outline: none;
+    transition: all 0.3s ease;
+}
+
+.form-input:focus,
+.form-textarea:focus {
+    border: 1px solid #3a7bd5;
+    background-color: #1a1f2e;
+}
+
+/* Checkbox */
+.checkbox-group {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.checkbox-label {
+    position: relative;
+    padding-left: 25px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    color: #e0e0e0;
+}
+
+.checkbox-input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+}
+
+.checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 16px;
+    width: 16px;
+    background-color: #232a3e;
+    border-radius: 4px;
+    border: 1px solid #3a7bd5;
+}
+
+.checkbox-label .checkbox-input:checked~.checkmark {
+    background-color: #3a7bd5;
+}
+
+/* Form Actions */
+.form-actions {
+    display: flex;
+    gap: 15px;
+    justify-content: flex-end;
+    margin-top: 10px;
+}
+
+.btn-cancel,
+.btn-submit {
+    padding: 10px 20px;
+    border-radius: 8px;
+    border: none;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.btn-cancel {
+    background-color: #7a7a7a;
+    color: #fff;
+}
+
+.btn-cancel:hover {
+    background-color: #5c5c5c;
+}
+
+.btn-submit {
+    background: linear-gradient(135deg, #3a7bd5, #00d4ff);
+    color: #fff;
+}
+
+.btn-submit:hover {
+    background: linear-gradient(135deg, #4a8ff5, #1ed1ff);
+    transform: scale(1.03);
+}
+
+.loading-spinner {
+    width: 20px;
+    height: 20px;
+    border: 3px solid #fff;
+    border-top: 3px solid transparent;
+    border-radius: 50%;
+    margin-right: 8px;
+    animation: spin 1s linear infinite;
+}
+
+/* Spinner Animation */
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+    .form-container {
+        flex-direction: column;
+    }
+
+    .form-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .image-section,
+    .form-section {
+        max-width: 100%;
+    }
+}
+
+@media (max-width: 768px) {
+    .add-update-menu-wrapper {
+        margin-left: 0;
+        padding: 20px;
+    }
+}
+
+/* Image Container */
+.image-preview,
+.employee-image {
+    width: 100%;
+    max-width: 220px;
+    /* fixed width */
+    height: 220px;
+    /* fixed height */
+    border-radius: 12px;
+    /* rounded corners */
+    overflow: hidden;
+    position: relative;
+    background-color: #232a3e;
+}
+
+/* Image inside container */
+.image-preview img,
+.employee-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    /* ensures image covers container */
+    display: block;
+}
+
+.image-overlay {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    background: rgba(0, 0, 0, 0.4);
+    padding: 5px 0;
+    color: #fff;
+    font-size: 0.85rem;
+}

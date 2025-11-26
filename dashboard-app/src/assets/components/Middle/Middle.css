@@ -1,0 +1,47 @@
+.main {
+  padding: 15px;
+}
+
+.input-box {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.input-box input {
+  flex: 1; /* makes input take remaining space */
+  padding: 10px 12px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+
+.input-box button {
+  padding: 8px 14px;
+  font-size: 14px;
+  border: none;
+  border-radius: 6px;
+  background-color: #f3f3f3;
+  cursor: pointer;
+  transition: 0.2s;
+  background-color: blue;
+  color: white;
+ 
+}
+
+.input-box button:hover {
+  background-color: #e0e0e0;
+}
+
+.input-box {
+  display: flex;
+  justify-content: space-between;
+}
+
+.input-box input {
+  flex-grow: 1;
+}
+
+.input-box button {
+  margin-left: 8px;
+}

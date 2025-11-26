@@ -1,0 +1,525 @@
+/* =========================
+   Reset & Body
+========================= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+
+/* =========================
+   Front Page Container
+========================= */
+.frontpage {
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    /* only front page disables scroll */
+    background: linear-gradient(135deg, #0a0e17 0%, #1a1f2e 50%, #0a0e17 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.8s ease-out;
+}
+
+.frontpage.loaded {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* =========================
+   Background Elements
+========================= */
+.background-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+
+.moon-glow {
+    position: absolute;
+    top: 5%;
+    right: 5%;
+    width: 150px;
+    height: 150px;
+    background: radial-gradient(circle at center,
+            rgba(255, 255, 255, 0.1) 0%,
+            rgba(255, 255, 255, 0.05) 30%,
+            transparent 70%);
+    border-radius: 50%;
+    filter: blur(20px);
+    animation: gentle-pulse 8s ease-in-out infinite;
+}
+
+@keyframes gentle-pulse {
+
+    0%,
+    100% {
+        opacity: 0.6;
+        transform: scale(1);
+    }
+
+    50% {
+        opacity: 0.8;
+        transform: scale(1.05);
+    }
+}
+
+.floating-orb {
+    position: absolute;
+    border-radius: 50%;
+    background: radial-gradient(circle at 30% 30%, rgba(255, 255, 255, 0.1), transparent 70%);
+    filter: blur(6px);
+    animation: float 18s ease-in-out infinite;
+}
+
+.orb1 {
+    width: 60px;
+    height: 60px;
+    top: 15%;
+    left: 10%;
+    background: radial-gradient(circle at 30% 30%, rgba(173, 216, 230, 0.15), transparent 70%);
+}
+
+.orb2 {
+    width: 40px;
+    height: 40px;
+    bottom: 15%;
+    right: 15%;
+    background: radial-gradient(circle at 30% 30%, rgba(240, 248, 255, 0.1), transparent 70%);
+    animation-delay: -9s;
+}
+
+@keyframes float {
+
+    0%,
+    100% {
+        transform: translate(0, 0) scale(1);
+    }
+
+    25% {
+        transform: translate(15px, -10px) scale(1.03);
+    }
+
+    50% {
+        transform: translate(-8px, 8px) scale(0.98);
+    }
+
+    75% {
+        transform: translate(-12px, -8px) scale(1.01);
+    }
+}
+
+/* =========================
+   Main Container
+========================= */
+.main-container {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    width: 90vw;
+    max-width: 600px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+    padding: 1rem;
+}
+
+/* =========================
+   Logo Section
+========================= */
+.logo-section {
+    margin-bottom: 0.5rem;
+}
+
+.logo-ring {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.08), rgba(255, 255, 255, 0.03));
+    box-shadow: 0 0 25px rgba(255, 255, 255, 0.08),
+        inset 0 0 15px rgba(255, 255, 255, 0.03);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 0.5rem;
+}
+
+.logo-img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+    filter: brightness(1.1) contrast(1.1);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+/* =========================
+   Content Section
+========================= */
+.content-section {
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+}
+
+.title {
+    display: flex;
+    flex-direction: column;
+    gap: 0.2rem;
+}
+
+.title-main {
+    font-size: 2.5rem;
+    font-weight: 300;
+    letter-spacing: 3px;
+    background: linear-gradient(135deg, #ffffff 0%, #e6e6e6 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.title-sub {
+    font-size: 1.1rem;
+    font-weight: 300;
+    letter-spacing: 4px;
+    color: rgba(255, 255, 255, 0.8);
+    text-transform: uppercase;
+}
+
+.tagline {
+    font-size: 1rem;
+    font-weight: 300;
+    color: rgba(255, 255, 255, 0.7);
+    font-style: italic;
+    letter-spacing: 1px;
+}
+
+.divider-line {
+    width: 60px;
+    height: 1.5px;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.5), transparent);
+    margin: 0.5rem auto;
+    position: relative;
+}
+
+.divider-line::before,
+.divider-line::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 4px;
+    height: 4px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.7);
+}
+
+.divider-line::before {
+    left: 0;
+}
+
+.divider-line::after {
+    right: 0;
+}
+
+.description {
+    font-size: 0.9rem;
+    line-height: 1.5;
+    color: rgba(255, 255, 255, 0.7);
+    max-width: 450px;
+    margin: 0 auto;
+    font-weight: 300;
+}
+
+/* =========================
+   CTA Section
+========================= */
+.cta-section {
+    margin-top: 0.5rem;
+}
+
+.enter-btn {
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.05));
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    color: white;
+    padding: 0.8rem 2rem;
+    border-radius: 50px;
+    font-size: 0.9rem;
+    font-weight: 300;
+    letter-spacing: 1.2px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    gap: 0.7rem;
+    backdrop-filter: blur(8px);
+    position: relative;
+    overflow: hidden;
+}
+
+.enter-btn::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.15), transparent);
+    transition: left 0.5s ease;
+}
+
+.enter-btn:hover::before {
+    left: 100%;
+}
+
+.enter-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3), 0 0 20px rgba(255, 255, 255, 0.06);
+    border-color: rgba(255, 255, 255, 0.25);
+}
+
+.enter-btn:active {
+    transform: translateY(0);
+}
+
+.btn-text {
+    position: relative;
+    z-index: 1;
+}
+
+.btn-arrow {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.3s ease;
+    position: relative;
+    z-index: 1;
+}
+
+.enter-btn:hover .btn-arrow {
+    transform: translateX(3px);
+}
+
+/* =========================
+   Info Bar
+========================= */
+.info-bar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1.5rem;
+    padding: 1rem 1.5rem;
+    background: rgba(255, 255, 255, 0.04);
+    border-radius: 10px;
+    backdrop-filter: blur(6px);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    margin-top: 0.5rem;
+}
+
+.info-item {
+    display: flex;
+    flex-direction: column;
+    gap: 0.2rem;
+}
+
+.info-label {
+    font-size: 0.7rem;
+    color: rgba(255, 255, 255, 0.6);
+    letter-spacing: 0.7px;
+    text-transform: uppercase;
+}
+
+.info-value {
+    font-size: 0.85rem;
+    color: rgba(255, 255, 255, 0.9);
+    font-weight: 300;
+}
+
+.info-divider {
+    width: 1px;
+    height: 20px;
+    background: linear-gradient(to bottom, transparent, rgba(255, 255, 255, 0.2), transparent);
+}
+
+/* =========================
+   Responsive
+========================= */
+@media (max-width: 480px) {
+    .main-container {
+        gap: 1.2rem;
+        width: 95vw;
+    }
+
+    .title-main {
+        font-size: 2rem;
+    }
+
+    .title-sub {
+        font-size: 0.95rem;
+    }
+
+    .logo-ring {
+        width: 90px;
+        height: 90px;
+    }
+
+    .moon-glow {
+        width: 120px;
+        height: 120px;
+    }
+
+    .floating-orb {
+        width: 35px;
+        height: 35px;
+    }
+
+    .info-bar {
+        flex-direction: column;
+        gap: 0.8rem;
+    }
+
+    .info-divider {
+        width: 60px;
+        height: 1px;
+    }
+}
+
+/* Keep html/body scrollable for dashboard etc. */
+html,
+body {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    /* prevent horizontal scroll globally */
+}
+
+/* Front page fills viewport, no scroll */
+.frontpage {
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    /* prevent scroll on front page */
+    background: linear-gradient(135deg, #0a0e17 0%, #1a1f2e 50%, #0a0e17 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.8s ease-out;
+}
+
+.frontpage.loaded {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Background Elements */
+.background-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+
+.moon-glow {
+    position: absolute;
+    top: 10%;
+    right: 10%;
+    width: 180px;
+    height: 180px;
+    background: radial-gradient(circle at center,
+            rgba(255, 255, 255, 0.1) 0%,
+            rgba(255, 255, 255, 0.05) 30%,
+            transparent 70%);
+    border-radius: 50%;
+    filter: blur(20px);
+    animation: gentle-pulse 8s ease-in-out infinite;
+}
+
+@keyframes gentle-pulse {
+
+    0%,
+    100% {
+        opacity: 0.6;
+        transform: scale(1);
+    }
+
+    50% {
+        opacity: 0.8;
+        transform: scale(1.05);
+    }
+}
+
+.floating-orb {
+    position: absolute;
+    border-radius: 50%;
+    background: radial-gradient(circle at 30% 30%, rgba(255, 255, 255, 0.1), transparent 70%);
+    filter: blur(6px);
+    animation: float 18s ease-in-out infinite;
+}
+
+.orb1 {
+    width: 70px;
+    height: 70px;
+    top: 20%;
+    left: 15%;
+    background: radial-gradient(circle at 30% 30%, rgba(173, 216, 230, 0.15), transparent 70%);
+}
+
+.orb2 {
+    width: 45px;
+    height: 45px;
+    bottom: 25%;
+    right: 20%;
+    background: radial-gradient(circle at 30% 30%, rgba(240, 248, 255, 0.1), transparent 70%);
+    animation-delay: -9s;
+}
+
+@keyframes float {
+
+    0%,
+    100% {
+        transform: translate(0, 0) scale(1);
+    }
+
+    25% {
+        transform: translate(15px, -10px) scale(1.03);
+    }
+
+    50% {
+        transform: translate(-8px, 8px) scale(0.98);
+    }
+
+    75% {
+        transform: translate(-12px, -8px) scale(1.01);
+    }
+}
+
+/* Main Container */
+.main-container {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    width: 90%;
+    max-width: 600px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+    padding: 1rem;
+}
