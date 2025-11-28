@@ -1,11 +1,11 @@
 import { createStore, applyMiddleware, compose } from 'redux';
-import thunk from 'redux-thunk'; // Correct import (no curly braces)
-import rootReducer from './reducers'; // Import the combined reducers
+import * as ReduxThunk from 'redux-thunk'; // Import everything
+import rootReducer from './reducers';
 
-// Enable Redux DevTools Extension if available
+const thunk = ReduxThunk.default || ReduxThunk; // works in Vite
+
 const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
 
-// Create the Redux store
 const store = createStore(
   rootReducer,
   composeEnhancers(applyMiddleware(thunk))
