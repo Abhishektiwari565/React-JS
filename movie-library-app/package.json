@@ -1,5 +1,5 @@
 {
-  "name": "movie-app",
+  "name": "movie-library-app",
   "private": true,
   "version": "0.0.0",
   "type": "module",
@@ -7,21 +7,14 @@
     "dev": "vite",
     "build": "vite build",
     "lint": "eslint .",
-    "preview": "vite preview",
-    "start": "react-scripts start",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
-    
+    "preview": "vite preview"
   },
   "dependencies": {
     "axios": "^1.13.2",
     "bootstrap": "^5.3.8",
     "react": "^19.2.0",
     "react-dom": "^19.2.0",
-    "react-redux": "^9.2.0",
-    "react-router-dom": "^6.30.2",
-    "redux": "^5.0.1",
-    "redux-thunk": "^3.1.0"
+    "react-router-dom": "^7.9.6"
   },
   "devDependencies": {
     "@eslint/js": "^9.39.1",

@@ -1,0 +1,195 @@
+[
+  {
+    "id": "1",
+    "title": "3 Idiots",
+    "year": "2009",
+    "genre": "Comedy, Drama",
+    "poster": "https://i.pinimg.com/1200x/99/e2/03/99e203b0a04b3d02aafdf15321d7ed67.jpg",
+    "plot": "Three friends explore the pressure of engineering college and life."
+  },
+  {
+    "id": "2",
+    "title": "Dangal",
+    "year": "2016",
+    "genre": "Biography, Drama, Sport",
+    "poster": "https://i.pinimg.com/736x/7b/fc/85/7bfc85e7a11d62a90aa58cd395529622.jpg",
+    "plot": "A father trains his daughters in wrestling to win gold for India."
+  },
+  {
+    "id": "3",
+    "title": "PK",
+    "year": "2014",
+    "genre": "Comedy, Drama, Fantasy",
+    "poster": "https://i.pinimg.com/736x/31/9f/e8/319fe8ff0e31e1101702f78e1fbffb77.jpg",
+    "plot": "An alien questions superstitions and blind faith on Earth."
+  },
+  {
+    "id": "4",
+    "title": "Zindagi Na Milegi Dobara",
+    "year": "2011",
+    "genre": "Adventure, Drama",
+    "poster": "https://i.pinimg.com/1200x/92/ee/00/92ee00cad14a11ac7f3f89d52cfbaf0b.jpg",
+    "plot": "Three friends go on a life-changing road trip."
+  },
+  {
+    "id": "5",
+    "title": "Bahubali: The Beginning",
+    "year": "2015",
+    "genre": "Action, Drama",
+    "poster": "https://i.pinimg.com/736x/7f/71/d8/7f71d83fc4d248971b4be085ef3f4d37.jpg",
+    "plot": "A young man learns about his royal heritage."
+  },
+  {
+    "id": "6",
+    "title": "Bahubali: The Conclusion",
+    "year": "2017",
+    "genre": "Action, Drama",
+    "poster": "https://i.pinimg.com/1200x/40/aa/4e/40aa4e597b0fb5c7d00bb54b1b2a0362.jpg",
+    "plot": "The epic conclusion reveals why Kattappa killed Baahubali."
+  },
+  {
+    "id": "7",
+    "title": "Kabir Singh",
+    "year": "2019",
+    "genre": "Drama, Romance",
+    "poster": "https://i.pinimg.com/1200x/51/4f/97/514f976a18d4eeb14fe330161f319bbe.jpg",
+    "plot": "A brilliant but short-tempered surgeon spirals after heartbreak."
+  },
+  {
+    "id": "8",
+    "title": "Kesari",
+    "year": "2019",
+    "genre": "Action, Drama, History",
+    "poster": "https://i.pinimg.com/736x/4a/e8/93/4ae893d62e979d6ec9c0ea4bb8573e5c.jpg",
+    "plot": "The heroic story of the Battle of Saragarhi fought by 21 Sikh soldiers."
+  },
+  {
+    "id": "9",
+    "title": "Chhichhore",
+    "year": "2019",
+    "genre": "Comedy, Drama",
+    "poster": "https://i.pinimg.com/736x/d3/ee/c1/d3eec17108b3f23755de13ff5544c0ef.jpg",
+    "plot": "A group of friends reunite to help a teenager deal with pressure."
+  },
+  {
+    "id": "10",
+    "title": "War",
+    "year": "2019",
+    "genre": "Action, Thriller",
+    "poster": "https://i.pinimg.com/736x/e1/59/75/e159758edf7845962e06d82637d453f0.jpg",
+    "plot": "An Indian soldier is assigned to eliminate his betrayed mentor."
+  },
+  {
+    "id": "11",
+    "title": "Brahmastra",
+    "year": "2022",
+    "genre": "Fantasy, Action",
+    "poster": "https://i.pinimg.com/736x/b3/bc/f2/b3bcf2144dd7f22ffa52c275c2a3c71e.jpg",
+    "plot": "A man discovers his supernatural powers linked to ancient astras."
+  },
+  {
+    "id": "12",
+    "title": "Pathaan",
+    "year": "2023",
+    "genre": "Action, Thriller",
+    "poster": "https://i.pinimg.com/736x/27/9b/58/279b58fb4d788e1fb28055e61e2fdd35.jpg",
+    "plot": "An Indian spy races against a deadly terrorist organization."
+  },
+  {
+    "id": "13",
+    "title": "Jawan",
+    "year": "2023",
+    "genre": "Action, Drama",
+    "poster": "https://i.pinimg.com/736x/9c/f1/9c/9cf19c40df2598d150d6e5cd6f9d0b58.jpg",
+    "plot": "A vigilante fights corruption and injustice in modern India."
+  },
+  {
+    "id": "14",
+    "title": "Animal",
+    "year": "2023",
+    "genre": "Action, Crime, Drama",
+    "poster": "https://i.pinimg.com/736x/bc/fe/47/bcfe47b4b2fbcb1dd40cef44569d6d81.jpg",
+    "plot": "A son goes to violent extremes to protect his father."
+  },
+  {
+    "id": "15",
+    "title": "Gadar 2",
+    "year": "2023",
+    "genre": "Action, Drama",
+    "poster": "https://i.pinimg.com/1200x/58/1a/93/581a93f590cf733e00020dd4055cf819.jpg",
+    "plot": "Tara Singh returns to Pakistan to rescue his captured son."
+  },
+  {
+    "id": "16",
+    "title": "RRR",
+    "year": "2022",
+    "genre": "Action, Drama",
+    "poster": "https://i.pinimg.com/736x/60/f6/43/60f6438d07c414f36db349badab2db9b.jpg",
+    "plot": "Two freedom fighters unite against British rule."
+  },
+  {
+    "id": "17",
+    "title": "Krrish",
+    "year": "2006",
+    "genre": "Action, Sci-Fi",
+    "poster": "https://i.pinimg.com/1200x/4c/aa/4a/4caa4af2546bdb4fb02844177cad7397.jpg",
+    "plot": "A young man discovers his superhero inheritance."
+  },
+  {
+    "id": "18",
+    "title": "Dilwale Dulhania Le Jayenge",
+    "year": "1995",
+    "genre": "Romance, Drama",
+    "poster": "https://i.pinimg.com/1200x/ab/9c/a0/ab9ca0e33fa45775c73330f9650dee7f.jpg",
+    "plot": "A story of love across cultures and traditions."
+  },
+  {
+    "id": "19",
+    "title": "Kabhi Khushi Kabhie Gham",
+    "year": "2001",
+    "genre": "Drama, Family",
+    "poster": "https://i.pinimg.com/1200x/8e/a9/e5/8ea9e57e38fe87cfad9361db18e8625e.jpg",
+    "plot": "A family struggles with love and relationships."
+  },
+  {
+    "id": "20",
+    "title": "Shershaah",
+    "year": "2021",
+    "genre": "War, Drama",
+    "poster": "https://i.pinimg.com/1200x/f8/0a/b2/f80ab29810755909e453c6b235fabe35.jpg",
+    "plot": "The biographical story of Captain Vikram Batra."
+  },
+  {
+    "id": "21",
+    "title": "Sooryavanshi",
+    "year": "2021",
+    "genre": "Action, Crime",
+    "poster": "https://i.pinimg.com/1200x/b0/d0/e6/b0d0e6d9557c7ba1af5577e390d2b1ef.jpg",
+    "plot": "An anti-terrorism officer uncovers a deadly plot."
+  },
+  {
+    "id": "22",
+    "title": "Bajrangi Bhaijaan",
+    "year": "2015",
+    "genre": "Drama, Comedy",
+    "poster": "https://i.pinimg.com/1200x/45/cb/4a/45cb4a8d3dd51482b503551f42b4005f.jpg",
+    "plot": "A man helps a mute Pakistani girl reunite with her parents."
+  },
+  {
+    "id": "23",
+    "title": "Tiger Zinda Hai",
+    "year": "2017",
+    "genre": "Action, Thriller",
+    "poster": "https://i.pinimg.com/736x/08/10/f0/0810f0d89fef6d34f5796f7cf116c453.jpg",
+    "plot": "Indian spies rescue nurses trapped by terrorists."
+  },
+  {
+    "id": "24",
+    "title": "Andhadhun",
+    "year": "2018",
+    "genre": "Crime, Thriller",
+    "poster": "https://i.pinimg.com/736x/24/c8/a3/24c8a3c30bf8a3ac8b4ba489754bc2bb.jpg",
+    "plot": "A blind pianist gets caught in a murder mystery."
+  }
+  
+]
