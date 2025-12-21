@@ -69,3 +69,7 @@ Perfect for **portfolio projects**, **landing pages**, and **practice purposes**
 
 ---
 demo video:
+
+https://github.com/user-attachments/assets/c1e32a3d-6c5d-40e9-8fc7-fc2e1cf94ef3
+
+
