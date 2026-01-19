@@ -21,10 +21,10 @@ export default function SignIn() {
   <div className="auth-box">
     <h1>Sign In</h1>
 
-    <input className="auth-input" type="text" placeholder="email"
+    <input className="auth-input" type="text" placeholder="Enter Email"
       onChange={(e)=>setEmail(e.target.value)} />
 
-    <input className="auth-input" type="text" placeholder="password"
+    <input className="auth-input" type="text" placeholder="Enter password"
       onChange={(e)=>setPassword(e.target.value)} />
 
     <button className="auth-btn"
