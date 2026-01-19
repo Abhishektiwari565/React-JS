@@ -107,3 +107,7 @@ Make sure to use your own API key for production use 🔐.
 
 ---
 Demo video:
+
+https://github.com/user-attachments/assets/63e7beda-54d0-4522-a795-207a95816991
+
+
