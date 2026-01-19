@@ -140,18 +140,5 @@ Built with **React**, **Redux Toolkit**, and **modern CSS**, it ensures a seamle
 ---
 
 ## ⚡ Installation & Setup
-
-```bash
-# 1. Clone the repository
-git clone https://github.com/yourusername/full-moon-pos.git
-cd full-moon-pos
-
-# 2. Install dependencies
-npm install
-
-# 3. Start the mock JSON server
-npx json-server --watch db.json --port 3000
-
-# 4. Start the React app
-npm start
+ demo video:
 
