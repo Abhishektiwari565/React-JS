@@ -24,16 +24,16 @@ export default function SignIn() {
     <input className="auth-input" type="text" placeholder="Enter Email"
       onChange={(e)=>setEmail(e.target.value)} />
 
-    <input className="auth-input" type="text" placeholder="Enter password"
+    <input className="auth-input" type="password" placeholder="Enter password"
       onChange={(e)=>setPassword(e.target.value)} />
-
-    <button className="auth-btn"
-      onClick={() => {
-        dispatch(signIn({ email, password }));
-        navigate("/home");
-      }}>
-      Sign In
-    </button>
+<button
+  onClick={async () => {
+    await dispatch(signIn({ email, password }));
+    navigate("/home");
+  }}
+>
+  Sign In
+</button>
   </div>
 </div>
 

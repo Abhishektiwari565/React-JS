@@ -14,10 +14,10 @@ export default function SignUp() {
   <div className="auth-box">
     <h3>Sign Up</h3>
 
-    <input className="auth-input" type="text" placeholder="email"
+    <input className="auth-input" type="text" placeholder="Enter Email"
       value={email} onChange={(e)=>setEmail(e.target.value)} />
 
-    <input className="auth-input" type="text" placeholder="password"
+    <input className="auth-input" type="password" placeholder="Enter Password"
       value={password} onChange={(e)=>setPassword(e.target.value)} />
 
     <button className="auth-btn"

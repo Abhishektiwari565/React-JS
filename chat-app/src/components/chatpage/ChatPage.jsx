@@ -14,38 +14,36 @@ export default function ChatPage() {
   const [editId, setEditId] = useState("");
 
   const location = useLocation();
-  const receiver = location.state;
+  const receiver = location.state || {};
 
   useEffect(() => {
+  if (currentUser?.email && receiver?.email) {
     dispatch(getUser());
     dispatch(readMessages({ sender: currentUser.email, receiver: receiver.email }));
-  }, []);
+  }
+}, []);
 
-  const handleSendOrUpdate = () => {
-    if (editId) {
-      
-      dispatch(updateMessage({
-        sender: currentUser.email,
-        receiver: receiver.email,
-        chatId: editId,
-        newMessage: message
-      }));
+  const handleSendOrUpdate = async () => {
+  if (editId) {
+    await dispatch(updateMessage({
+      sender: currentUser.email,
+      receiver: receiver.email,
+      chatId: editId,
+      newMessage: message
+    }));
+  } else {
+    await dispatch(sendMessage({
+      message,
+      sender: currentUser.email,
+      receiver: receiver.email
+    }));
+  }
 
-      setEditId("");
-      setMessage("");
-    } else {
-      
-      dispatch(sendMessage({
-        message: message,
-        sender: currentUser.email,
-        receiver: receiver.email
-      }));
+  setEditId("");
+  setMessage("");
 
-      setMessage("");
-    }
-
-    dispatch(readMessages({ sender: currentUser.email, receiver: receiver.email }));
-  };
+  dispatch(readMessages({ sender: currentUser.email, receiver: receiver.email }));
+};
 
   const handleDeleteMessage = (chat) => {
   if (chat.sender !== currentUser.email) {
@@ -73,7 +71,7 @@ export default function ChatPage() {
   return (
     <div className="chat-view">
       <div className="chat-page">
-        <h3>User: {receiver.email}</h3>
+        <h3>User: {receiver?.email}</h3>
 
         <div>
           {chats.map((chat, i) => {

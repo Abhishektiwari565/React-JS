@@ -195,7 +195,7 @@
   background: #00bcd4;
   transform: translateY(-2px);
 }
- input::placeholder {
-  color: #ffffff;
-  opacity: 0.8;   /* Slight fade for better look */
+input::placeholder {
+  color: #03e9f4;   /* Cyan (best for your theme) */
+  opacity: 1;
 }

@@ -35,24 +35,29 @@ export const sendMessage = createAsyncThunk("chat/send", async ({ message, sende
     }
 });
 
-export const deleteMessage = createAsyncThunk("chat/delete", async ({ sender, receiver, chatId }) => {
-    const docId = docIdGenerator(sender, receiver);
-    if(sender.email==getCurrentUser.email){}
-    await deleteDoc(doc(db, "chatroom", docId, "chats", chatId))
-})
+export const deleteMessage = createAsyncThunk(
+    "chat/delete",
+    async ({ sender, receiver, chatId }) => {
+        const docId = docIdGenerator(sender, receiver);
+
+        await deleteDoc(doc(db, "chatroom", docId, "chats", chatId));
+
+        return chatId;
+    }
+);
 
 export const updateMessage = createAsyncThunk(
-  "chat/update",
-  async ({ sender, receiver, chatId, newMessage }) => {
-    const docId = docIdGenerator(sender, receiver);
+    "chat/update",
+    async ({ sender, receiver, chatId, newMessage }) => {
+        const docId = docIdGenerator(sender, receiver);
 
-    await updateDoc(
-      doc(db, "chatroom", docId, "chats", chatId),
-      { message: newMessage }
-    );
+        await updateDoc(
+            doc(db, "chatroom", docId, "chats", chatId),
+            { message: newMessage }
+        );
 
-    return { newMessage, chatId };
-  }
+        return { newMessage, chatId };
+    }
 );
 
 
@@ -85,8 +90,8 @@ const chatSlice = createSlice({
             state.isLoading = false;
             state.error = "chat cant fetched !!"
             console.log(state.error)
-        }).addCase(deleteMessage.fulfilled, (state) => {
-            state.error = "message deleted"
+        }).addCase(deleteMessage.fulfilled, (state, action) => {
+            state.chats = state.chats.filter(c => c.chatId !== action.payload);
         }).addCase(updateMessage.fulfilled, (state, action) => {
             const { chatId, newMessage } = action.payload;
             const index = state.chats.findIndex(c => c.chatId === chatId);

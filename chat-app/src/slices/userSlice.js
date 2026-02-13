@@ -1,6 +1,6 @@
 import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
 import { signInWithEmailAndPassword, createUserWithEmailAndPassword } from 'firebase/auth'
-import { auth, db } from '../firebase'
+import { auth, db } from '../firebase.js'
 import { addDoc, collection, getDocs ,setDoc,doc } from 'firebase/firestore'
 
 export const signIn = createAsyncThunk("user/signin", async ({ email, password }) => {
@@ -17,10 +17,14 @@ export const signIn = createAsyncThunk("user/signin", async ({ email, password }
 
 export const signUp = createAsyncThunk("user/signup", async ({ email, password }) => {
     const userCredential = await createUserWithEmailAndPassword(auth, email, password)
+   
+    console.log(userCredential);
     const user = {
         name: userCredential.user.displayName,
         email: userCredential.user.email,
     }
+     await setDoc(doc(db, "users", user.email), user);
+
     return user;
 });
 
@@ -34,7 +38,7 @@ export const fetchUser = createAsyncThunk("user/fetch", async () => {
 
 const initialState = {
     users: [],
-    currentUser:{},
+    currentUser: JSON.parse(localStorage.getItem("user")) || null,
     isLoading: false,
 }
 const userSlice = createSlice({

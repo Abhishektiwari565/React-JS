@@ -17,13 +17,16 @@ export default function UserHomePage() {
     return (
         <div className="home-container">
             <div className="home-header">
-                <h2>Welcome, <span>{currentUser.email}</span></h2>
+                {
+                    console.log(currentUser?.email)
+                }
+                <h2>Welcome, <span>{currentUser?.email}</span></h2>
             </div>
             <div className="users-wrapper">
                 <h3 className="users-title">Available Users</h3>
                 <ol className="users-list">
                     {users.map((user, index) => {
-                        if (user.email !== currentUser.email) {
+                        if (user.email !== currentUser?.email) {
                             return (
                                 <li
                                     key={index}
