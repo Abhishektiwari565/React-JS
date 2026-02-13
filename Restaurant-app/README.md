@@ -142,3 +142,7 @@ Built with **React**, **Redux Toolkit**, and **modern CSS**, it ensures a seamle
 ## ⚡ Installation & Setup
  demo video:
 
+https://github.com/user-attachments/assets/d544f13b-ded6-4745-b044-1fcea8c24d54
+
+
+
