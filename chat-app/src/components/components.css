@@ -1,158 +1,178 @@
-/* Page Centering */
+/* Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+
+/* ===============================
+   GLOBAL
+================================= */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+}
+
+/* ===============================
+   AUTH PAGE (SIGNIN / SIGNUP)
+================================= */
+
 .auth-container {
-  width: 100%;
   height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
-  background: #f3f4f6;
-  font-family: Arial, sans-serif;
+  background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+  background-size: 400% 400%;
+  animation: gradientBG 10s ease infinite;
 }
 
-/* Card Box */
+@keyframes gradientBG {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
 .auth-box {
-  width: 350px;
-  padding: 25px;
-  background: white;
-  border-radius: 12px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  width: 380px;
+  padding: 40px 30px;
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(18px);
+  border-radius: 20px;
+  box-shadow: 0 0 40px rgba(0, 255, 255, 0.25);
   text-align: center;
+  color: white;
+  transition: 0.4s ease;
 }
 
-/* Heading */
+.auth-box:hover {
+  transform: translateY(-5px);
+}
+
 .auth-box h1,
 .auth-box h3 {
-  margin-bottom: 20px;
-  color: #333;
+  margin-bottom: 25px;
+  font-weight: 600;
+  letter-spacing: 1px;
 }
 
-/* Inputs */
 .auth-input {
   width: 100%;
-  padding: 10px;
-  margin: 10px 0;
-  border-radius: 6px;
-  border: 1px solid #ccc;
-  font-size: 15px;
+  padding: 14px;
+  margin: 12px 0;
+  border-radius: 12px;
+  border: none;
   outline: none;
+  background: rgba(255, 255, 255, 0.15);
+  color: white;
+  font-size: 15px;
+  transition: 0.3s;
+}
+
+.auth-input::placeholder {
+  color: rgba(255, 255, 255, 0.6);
 }
 
 .auth-input:focus {
-  border-color: #4f46e5;
+  background: rgba(255, 255, 255, 0.25);
+  box-shadow: 0 0 10px #03e9f4;
 }
 
-/* Button */
 .auth-btn {
   width: 100%;
-  padding: 10px;
-  background: #4f46e5;
+  padding: 14px;
+  margin-top: 15px;
   border: none;
-  color: white;
+  border-radius: 12px;
   font-size: 16px;
-  margin-top: 10px;
+  font-weight: 600;
   cursor: pointer;
-  border-radius: 6px;
+  background: linear-gradient(135deg, #00f5a0, #00d9f5);
+  color: #000;
+  transition: 0.3s ease;
 }
 
 .auth-btn:hover {
-  background: #4338ca;
+  transform: scale(1.05);
+  box-shadow: 0 0 15px #00f5a0;
 }
 
-/* for homepage  */
+/* ===============================
+   HOME PAGE
+================================= */
 
-/* --- MAIN CONTAINER --- */
 .home-container {
-  width: 100%;
   min-height: 100vh;
-  background: linear-gradient(135deg, #1d1f27, #2b2e3a);
-  padding: 30px;
-  color: #fff;
-  font-family: "Poppins", sans-serif;
+  background: linear-gradient(135deg, #1f1c2c, #928dab);
+  padding: 40px 20px;
+  color: white;
 }
 
-/* --- HEADER SECTION --- */
 .home-header {
   text-align: center;
-  margin-bottom: 30px;
+  margin-bottom: 40px;
 }
 
 .home-header h2 {
   font-size: 32px;
   font-weight: 600;
-  margin: 0;
 }
 
 .home-header span {
-  color: #03e9f4;
-  font-weight: bold;
+  color: #00f5a0;
 }
 
-/* --- USERS WRAPPER BOX --- */
+/* USERS WRAPPER */
+
 .users-wrapper {
-  width: 80%;
+  width: 85%;
+  max-width: 800px;
   margin: auto;
-  background: rgba(255, 255, 255, 0.05);
-  backdrop-filter: blur(12px);
-  padding: 25px;
-  border-radius: 18px;
-  box-shadow: 0px 0px 20px rgba(0, 255, 255, 0.2);
-  transition: 0.3s ease;
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(15px);
+  padding: 30px;
+  border-radius: 25px;
+  box-shadow: 0 0 40px rgba(0, 255, 255, 0.2);
 }
 
-/* TITLE */
 .users-title {
   text-align: center;
   font-size: 24px;
-  margin-bottom: 20px;
-  letter-spacing: 1px;
+  margin-bottom: 25px;
+  font-weight: 600;
 }
 
-/* --- USERS LIST --- */
+/* USER LIST */
+
 .users-list {
   list-style: none;
-  padding: 0;
 }
 
-/* EACH USER ITEM */
 .user-item {
-  background: rgba(255, 255, 255, 0.08);
-  padding: 18px;
-  margin-bottom: 12px;
-  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.12);
+  padding: 18px 20px;
+  margin-bottom: 15px;
+  border-radius: 15px;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  transition: 0.3s ease;
   cursor: pointer;
-
-  transition: transform 0.15s ease, background 0.25s ease;
 }
 
 .user-item:hover {
+  background: linear-gradient(135deg, #00f5a0, #00d9f5);
+  color: black;
   transform: translateY(-3px);
-  background: rgba(255, 255, 255, 0.16);
-}
-
-/* USER INFO LEFT SIDE */
-.user-info {
-  display: flex;
-  flex-direction: column;
 }
 
 .user-email {
-  font-size: 18px;
+  font-size: 17px;
   font-weight: 600;
-  color: #03e9f4;
 }
 
-.user-status {
-  font-size: 13px;
-  opacity: 0.8;
-}
-
-/* BADGE (RIGHT SIDE) */
 .user-badge {
-  color: #00ff95;
   font-size: 14px;
-  font-weight: bold;
+  font-weight: 600;
 }
-

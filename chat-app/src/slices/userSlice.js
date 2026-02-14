@@ -3,30 +3,48 @@ import { signInWithEmailAndPassword, createUserWithEmailAndPassword } from 'fire
 import { auth, db } from '../firebase.js'
 import { addDoc, collection, getDocs ,setDoc,doc } from 'firebase/firestore'
 
-export const signIn = createAsyncThunk("user/signin", async ({ email, password }) => {
-    const userCredential = await signInWithEmailAndPassword(auth, email, password)
-    const user = {
-        name: userCredential.user.displayName,
-        email: userCredential.user.email,
-    }
-    
-    // await addDoc(collection(db, "users"), user)
-    await setDoc(doc(db,"users",email),user)
-    return user;
-});
+export const signIn = createAsyncThunk(
+  "user/signin",
+  async ({ email, password }) => {
+    const userCredential = await signInWithEmailAndPassword(
+      auth,
+      email,
+      password
+    );
 
-export const signUp = createAsyncThunk("user/signup", async ({ email, password }) => {
-    const userCredential = await createUserWithEmailAndPassword(auth, email, password)
-   
-    console.log(userCredential);
     const user = {
-        name: userCredential.user.displayName,
-        email: userCredential.user.email,
-    }
-     await setDoc(doc(db, "users", user.email), user);
+      name: userCredential.user.displayName,
+      email: userCredential.user.email,
+      uid: userCredential.user.uid,
+    };
+
+    return user; // no Firestore write here
+  }
+);
+export const signUp = createAsyncThunk(
+  "user/signup",
+  async ({ email, password }) => {
+    const userCredential = await createUserWithEmailAndPassword(
+      auth,
+      email,
+      password
+    );
+
+    const user = {
+      name: userCredential.user.displayName || "",
+      email: userCredential.user.email,
+      uid: userCredential.user.uid,
+    };
+
+    await setDoc(
+      doc(db, "users", user.uid),
+      user
+    );
+    console.log("User saved to Firestore");
 
     return user;
-});
+  }
+);
 
 export const fetchUser = createAsyncThunk("user/fetch", async () => {
     const querySnapshot = await getDocs(collection(db, "users"))
@@ -66,6 +84,7 @@ const userSlice = createSlice({
                 state.users.push(user);
             }
             localStorage.setItem("user",JSON.stringify(user));
+            console.log("Saved in localStorage:", localStorage.getItem("user"));
             state.currentUser=user;
             state.isLoading = false;
             alert("user signin successfully !!")
