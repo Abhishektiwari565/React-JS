@@ -3,7 +3,7 @@
 A real-time chat application built using React JS, Firebase, and Vercel for deployment.
 This project demonstrates user authentication, message syncing, and a clean chat UI — all built with modern React concepts. 🚀
 
-🔗 Live Demo: https://react-js-ten-theta.vercel.app/
+🔗 Live Demo:https://chatify-drab-nu.vercel.app/
 
 📌 Project Overview
 
