@@ -3,6 +3,7 @@ import { signInWithEmailAndPassword, createUserWithEmailAndPassword } from 'fire
 import { auth, db } from '../firebase.js'
 import { addDoc, collection, getDocs ,setDoc,doc } from 'firebase/firestore'
 
+
 export const signIn = createAsyncThunk(
   "user/signin",
   async ({ email, password }) => {

@@ -176,3 +176,21 @@ body {
   font-size: 14px;
   font-weight: 600;
 }
+
+.auth-switch {
+  margin-top: 18px;
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.auth-link {
+  color: #00f5a0;
+  text-decoration: none;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+.auth-link:hover {
+  text-decoration: underline;
+  color: #00d9f5;
+}

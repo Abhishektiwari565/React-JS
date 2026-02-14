@@ -3,6 +3,7 @@ import {useDispatch,useSelector} from 'react-redux'
 import {signIn,fetchUser} from '../slices/userSlice'
 import {useNavigate} from 'react-router'
 import './components.css'
+import {Link} from 'react-router-dom'
 
 export default function SignIn() {
 
@@ -34,6 +35,12 @@ export default function SignIn() {
 >
   Sign In
 </button>
+  <p className="auth-switch">
+      Don’t have an account?{" "}
+      <Link to="/signup" className="auth-link">
+        Sign Up
+      </Link>
+    </p>
   </div>
 </div>
 

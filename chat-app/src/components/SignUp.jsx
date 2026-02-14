@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import {signUp} from '../slices/userSlice'
 import {useDispatch,useSelector} from 'react-redux'
 import './components.css'
+import {Link} from 'react-router-dom'
 
 export default function SignUp() {
     const dispatch=useDispatch()
@@ -24,6 +25,12 @@ export default function SignUp() {
       onClick={() => dispatch(signUp({ email, password }))}>
       Sign Up
     </button>
+    <p className="auth-switch">
+  Already have an account?{" "}
+  <Link to="/" className="auth-link">
+    Sign In
+  </Link>
+</p>
   </div>
 </div>
 
